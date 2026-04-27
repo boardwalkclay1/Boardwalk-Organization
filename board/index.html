@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Board Dashboard | Boardwalk Clay Organization</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="/js/board.js" defer></script>
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="admin-logo">
+    <img src="/assets/logo.png" class="logo-img">
+    <div class="admin-title">
+      <span class="admin-org">Boardwalk Clay Organization</span>
+      <span class="admin-sub">Board Member Dashboard</span>
+    </div>
+  </div>
+  <div class="admin-header-right">
+    <span class="admin-role-badge board-badge">Board Member</span>
+    <button class="admin-header-btn">Log Out</button>
+  </div>
+</header>
+
+<main class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="sidebar-section-label">My Work</div>
+    <button data-panel="my-overview" class="sidebar-btn active">My Overview</button>
+    <button data-panel="my-tasks" class="sidebar-btn">My Tasks</button>
+    <button data-panel="messages" class="sidebar-btn">Board Messages</button>
+
+    <div class="sidebar-section-label">Resources</div>
+    <button data-panel="docs" class="sidebar-btn">Shared Documents</button>
+    <button data-panel="events" class="sidebar-btn">Events & Calendar</button>
+    <button data-panel="youth-notes" class="sidebar-btn">Youth & Program Notes</button>
+    <button data-panel="sponsor-tools" class="sidebar-btn">Sponsor & Donor Tools</button>
+  </aside>
+
+  <section id="board-panel" class="admin-panel">
+    <div class="panel-view" id="panel-my-overview">
+      <h2>My Overview</h2>
+      <div class="grid-3">
+        <div class="stat-card">
+          <h3>My Open Tasks</h3>
+          <p class="stat-number">5</p>
+          <p class="stat-sub">Assigned to you</p>
+        </div>
+        <div class="stat-card">
+          <h3>Upcoming Events</h3>
+          <p class="stat-number">2</p>
+          <p class="stat-sub">You’re involved in</p>
+        </div>
+        <div class="stat-card">
+          <h3>Unread Messages</h3>
+          <p class="stat-number">3</p>
+          <p class="stat-sub">Across board channels</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-view hidden" id="panel-my-tasks">
+      <h2>My Tasks</h2>
+      <div class="panel-box">
+        <h3>Assigned Tasks</h3>
+        <div class="task-columns">
+          <div class="task-column">
+            <h4>Not Started</h4>
+            <div class="task-card">
+              <h5>Call sponsor lead</h5>
+              <p>Due: Friday</p>
+            </div>
+          </div>
+          <div class="task-column">
+            <h4>In Progress</h4>
+            <div class="task-card">
+              <h5>Prepare youth training notes</h5>
+              <p>Due: Next week</p>
+            </div>
+          </div>
+          <div class="task-column">
+            <h4>Completed</h4>
+            <div class="task-card">
+              <h5>Confirm event volunteers</h5>
+              <p>Done</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-view hidden" id="panel-messages">
+      <h2>Board Messages</h2>
+      <div class="panel-split">
+        <div class="panel-box">
+          <h3>Channels</h3>
+          <ul class="channel-list">
+            <li class="channel active"># board-general</li>
+            <li class="channel"># youth-programs</li>
+            <li class="channel"># sponsors-finance</li>
+          </ul>
+        </div>
+        <div class="panel-box">
+          <h3># board-general</h3>
+          <div class="message-thread">
+            <div class="message">
+              <span class="message-author">Admin</span>
+              <span class="message-text">Reminder: board meeting next Thursday.</span>
+            </div>
+          </div>
+          <div class="message-input-row">
+            <input type="text" placeholder="Type a message...">
+            <button class="small-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-view hidden" id="panel-docs">
+      <h2>Shared Documents</h2>
+      <div class="panel-box">
+        <h3>Key Files</h3>
+        <ul class="doc-list">
+          <li><span class="tag tag-doc">Agenda</span> Next Board Meeting Agenda</li>
+          <li><span class="tag tag-doc">Program</span> Youth Training Outline</li>
+          <li><span class="tag tag-doc">Sponsors</span> Current Sponsor List</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel-view hidden" id="panel-events">
+      <h2>Events & Calendar</h2>
+      <div class="panel-box">
+        <h3>My Events</h3>
+        <ul class="event-list">
+          <li><strong>Youth Cleanup Day</strong> – You’re marked as attending.</li>
+          <li><strong>Board Strategy Meeting</strong> – You’re required.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel-view hidden" id="panel-youth-notes">
+      <h2>Youth & Program Notes</h2>
+      <div class="panel-box">
+        <h3>Field Notes</h3>
+        <p>Use this area (later via JS + DB) to log youth progress, ideas, and observations.</p>
+      </div>
+    </div>
+
+    <div class="panel-view hidden" id="panel-sponsor-tools">
+      <h2>Sponsor & Donor Tools</h2>
+      <div class="panel-box">
+        <h3>Quick Actions</h3>
+        <div class="quick-actions">
+          <button class="qa-btn">Log Sponsor Call</button>
+          <button class="qa-btn">Send Follow-Up Template</button>
+          <button class="qa-btn">Add Sponsor Note</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</body>
+</html>
