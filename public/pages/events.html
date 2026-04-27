@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events | Boardwalk Clay Nonprofit</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Upcoming community cleanups, tree work days, youth workshops, and service events with Boardwalk Clay Nonprofit.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../assets/favicon.ico">
+
+    <meta property="og:title" content="Boardwalk Clay Nonprofit - Events">
+    <meta property="og:description" content="Join our community events, service days, and youth training workshops.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="burger">☰</div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="community.html">Community Service</a>
+    <a href="sponsorships.html">Sponsorships</a>
+    <a href="youth.html">Youth Training</a>
+    <a href="mentors.html">Mentors</a>
+    <a href="events.html">Events</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1 style="text-align:center;">Upcoming Events</h1>
+
+<div class="category" data-target="cleanup-day">Neighborhood Cleanup Day</div>
+<div id="cleanup-day" class="content-box">
+    <p><strong>Date:</strong> Every 2nd Saturday</p>
+    <p><strong>Location:</strong> Rotating neighborhoods</p>
+    <p><strong>Description:</strong> Join us as we clear trash, trim overgrowth, and restore neglected areas.</p>
+    <button data-popup="cleanup-popup">Sign Up</button>
+</div>
+
+<div class="category" data-target="tree-work">Tree Work Volunteer Day</div>
+<div id="tree-work" class="content-box">
+    <p><strong>Date:</strong> Monthly</p>
+    <p><strong>Location:</strong> Announced weekly</p>
+    <p><strong>Description:</strong> Assist mentors and youth with safe tree trimming, hazard removal, and environmental care.</p>
+    <button data-popup="tree-popup">Sign Up</button>
+</div>
+
+<div class="category" data-target="youth-workshop">Youth Training Workshop</div>
+<div id="youth-workshop" class="content-box">
+    <p><strong>Date:</strong> Twice per month</p>
+    <p><strong>Location:</strong> Boardwalk Clay Training Grounds</p>
+    <p><strong>Description:</strong> Hands-on training in tree climbing, safety, teamwork, and leadership.</p>
+    <button data-popup="youth-popup">Sign Up</button>
+</div>
+
+<!-- POPUPS -->
+<div id="cleanup-popup" class="popup">
+    <div class="popup-content">
+        <h2>Sign Up for Cleanup Day</h2>
+        <p>Send us your name and availability.</p>
+        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Cleanup%20Day%20Volunteer&body=Name:%0D%0AAvailability:%0D%0A'">Open Email</button>
+        <br><br>
+        <button class="close-popup">Close</button>
+    </div>
+</div>
+
+<div id="tree-popup" class="popup">
+    <div class="popup-content">
+        <h2>Sign Up for Tree Work Day</h2>
+        <p>Send us your name and experience level.</p>
+        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Tree%20Work%20Volunteer&body=Name:%0D%0AExperience:%0D%0AAvailability:'">Open Email</button>
+        <br><br>
+        <button class="close-popup">Close</button>
+    </div>
+</div>
+
+<div id="youth-popup" class="popup">
+    <div class="popup-content">
+        <h2>Youth Workshop Sign-Up</h2>
+        <p>Send us your youth’s name and age.</p>
+        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Youth%20Workshop%20Sign-Up&body=Youth%20Name:%0D%0AAge:%0D%0AParent/Guardian%20Name:%0D%0A'">Open Email</button>
+        <br><br>
+        <button class="close-popup">Close</button>
+    </div>
+</div>
+
+</body>
+</html>
