@@ -1,86 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Youth Training | Boardwalk Clay Nonprofit</title>
+    <title>Youth Training | Boardwalk Clay Organization</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Youth training in tree climbing, safety, environmental care, and community service with Boardwalk Clay Nonprofit.">
+    <meta name="description" content="Youth training in professional tree climbing, safety, environmental care, business skills, and community service with Boardwalk Clay Organization.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="../assets/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico">
 
-    <meta property="og:title" content="Boardwalk Clay Nonprofit - Youth Training">
-    <meta property="og:description" content="Hands-on youth training in tree work, safety, and community restoration.">
+    <!-- Social Preview -->
+    <meta property="og:title" content="Boardwalk Clay Organization - Youth Training">
+    <meta property="og:description" content="Hands-on youth training in tree climbing, safety, business skills, and community restoration.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <!-- Correct paths -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+
+    <style>
+        body {
+            background-image: url('/assets/youth.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hidden-content { display: none; }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="logo">
+        <img src="/assets/logo.png" class="logo-img">
+        Boardwalk Clay Organization
+    </div>
     <div class="burger">☰</div>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="community.html">Community Service</a>
-    <a href="sponsorships.html">Sponsorships</a>
-    <a href="youth.html">Youth Training</a>
-    <a href="mentors.html">Mentors</a>
-    <a href="events.html">Events</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="/pages/community.html">Community Service</a>
+    <a href="/pages/sponsorships.html">Sponsorships</a>
+    <a href="/pages/youth.html">Youth Training</a>
+    <a href="/pages/mentors.html">Mentors</a>
+    <a href="/pages/events.html">Events</a>
+    <a href="/pages/donate.html">Donate</a>
+    <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center;">Youth Training Programs</h1>
+<h1 style="text-align:center; margin-top:40px;">Youth Training Programs</h1>
 
-<div class="category" data-target="youth-overview">Program Overview</div>
-<div id="youth-overview" class="content-box">
-    <p>Our youth training program is built around real work, real responsibility, and real support.</p>
+<!-- CATEGORY BUTTONS -->
+<div class="category" data-target="youth-overview">🌱 Program Overview</div>
+<div class="category" data-target="tree-climbing">🌳 Professional Tree Climbing & Safety</div>
+<div class="category" data-target="business-training">📘 Business & Job Skills Training</div>
+<div class="category" data-target="community-projects">🌿 Community Projects</div>
+<div class="category" data-target="join-program">💚 Join the Program</div>
+<div class="category" data-target="sponsor-youth-training">🤝 Sponsor Youth Training</div>
+
+<!-- HIDDEN CONTENT SECTIONS -->
+<div id="youth-overview" class="hidden-content">
+    <h2>🌱 Program Overview</h2>
+    <p>
+        Our youth training program is built around **real work, real responsibility, and real mentorship**.  
+        We don’t teach from a classroom — we teach from the field, where youth learn hands-on skills that build confidence, discipline, and purpose.
+    </p>
+    <p>Every youth in our program learns:</p>
     <ul>
-        <li>Tree climbing fundamentals and safety</li>
-        <li>Tool handling and site awareness</li>
-        <li>Environmental stewardship and care</li>
-        <li>Teamwork, leadership, and communication</li>
+        <li>Tree climbing fundamentals and professional safety practices</li>
+        <li>Tool handling, rope management, and situational awareness</li>
+        <li>Environmental stewardship and respect for nature</li>
+        <li>Teamwork, leadership, communication, and accountability</li>
     </ul>
 </div>
 
-<div class="category" data-target="tree-climbing">Tree Climbing & Safety</div>
-<div id="tree-climbing" class="content-box">
-    <p>Youth learn from experienced mentors how to:</p>
+<div id="tree-climbing" class="hidden-content">
+    <h2>🌳 Professional Tree Climbing & Safety</h2>
+    <p>
+        Our youth learn **professional tree climbing** from experienced mentors who work in the field every day.  
+        This is not recreational climbing — this is **real arborist training**, taught with industry‑standard gear and safety protocols.
+    </p>
+    <p>Youth learn how to:</p>
     <ul>
-        <li>Use harnesses, ropes, and helmets correctly</li>
-        <li>Assess tree health and structural risk</li>
-        <li>Move safely in elevated environments</li>
+        <li>Use harnesses, saddles, helmets, and ropes correctly</li>
+        <li>Perform safe ascents and controlled descents</li>
+        <li>Inspect trees for health, hazards, and structural weaknesses</li>
+        <li>Move confidently and safely in elevated environments</li>
         <li>Respect the environment while working in it</li>
     </ul>
+    <p>
+        This training builds strength, focus, discipline, and trust — skills that carry into every part of life.
+    </p>
 </div>
 
-<div class="category" data-target="community-projects">Community Projects</div>
-<div id="community-projects" class="content-box">
-    <p>Training is tied directly to service:</p>
+<div id="business-training" class="hidden-content">
+    <h2>📘 Business & Job Skills Training</h2>
+    <p>
+        We don’t just train youth to climb — we train them to **build a future**.  
+        Our program includes real business education so youth can turn their skills into opportunities.
+    </p>
+    <p>Youth learn how to:</p>
+    <ul>
+        <li>Find clients and understand what homeowners look for</li>
+        <li>Give estimates and communicate pricing clearly</li>
+        <li>Land jobs through professionalism and confidence</li>
+        <li>Stay organized with scheduling, tools, and responsibilities</li>
+        <li>Practice proper etiquette when speaking with clients</li>
+        <li>Build a reputation based on reliability and respect</li>
+    </ul>
+    <p>
+        These business skills prepare youth not just for tree work — but for **any career path** they choose.
+    </p>
+</div>
+
+<div id="community-projects" class="hidden-content">
+    <h2>🌿 Community Projects</h2>
+    <p>
+        Training is tied directly to service.  
+        Youth don’t just practice skills — they use them to **restore and uplift the community**.
+    </p>
     <ul>
         <li>Cleanup days in neglected areas</li>
         <li>Tree trimming and hazard removal</li>
         <li>Light building and repair projects</li>
         <li>Beautification and restoration efforts</li>
     </ul>
-    <a href="community.html"><button>See Community Service</button></a>
+    <p>
+        Every project teaches responsibility, teamwork, and pride in making a real difference.
+    </p>
+    <button onclick="location.href='/pages/community.html'">See Community Service</button>
 </div>
 
-<div class="category" data-target="join-program">Join the Program</div>
-<div id="join-program" class="content-box">
-    <p>We welcome youth who are ready to learn, work, and grow.</p>
-    <p>Parents, guardians, or youth themselves can reach out to start the process.</p>
+<div id="join-program" class="hidden-content">
+    <h2>💚 Join the Program</h2>
+    <p>
+        We welcome youth who are ready to learn, work, and grow.  
+        No experience is required — just a willingness to try, listen, and show up.
+    </p>
+    <p>
+        Parents, guardians, or youth themselves can reach out to start the enrollment process.
+    </p>
     <button data-popup="youth-join-popup">Request Youth Enrollment</button>
 </div>
 
-<div class="category" data-target="sponsor-youth-training">Sponsor Youth Training</div>
-<div id="sponsor-youth-training" class="content-box">
-    <p>You can directly support youth training by sponsoring gear, classes, and service days.</p>
-    <a href="sponsorships.html"><button>View Sponsorship Options</button></a>
-    <a href="donate.html"><button>Donate to Youth Training</button></a>
+<div id="sponsor-youth-training" class="hidden-content">
+    <h2>🤝 Sponsor Youth Training</h2>
+    <p>
+        You can directly support youth training by sponsoring gear, classes, and service days.  
+        Your support helps youth gain skills that last a lifetime.
+    </p>
+    <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Options</button>
+    <button onclick="location.href='/pages/donate.html'">Donate to Youth Training</button>
 </div>
 
 <!-- Youth Join Popup -->
@@ -95,6 +166,9 @@
         <button class="close-popup">Close</button>
     </div>
 </div>
+
+<!-- INFO BOX -->
+<div id="info-box" class="content-box"></div>
 
 </body>
 </html>
