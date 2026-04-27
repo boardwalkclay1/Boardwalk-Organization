@@ -1,5 +1,5 @@
 /* ============================================================
-   CINEMATIC BOARDWALK CLAY NONPROFIT THEME — FOREST EDITION
+   CINEMATIC BOARDWALK CLAY ORGANIZATION — FOREST EDITION
    ============================================================ */
 
 /* GOOGLE FONTS */
@@ -15,22 +15,12 @@ body {
     overflow-x: hidden;
 }
 
-/* FALLING LEAVES ANIMATION */
+/* FALLING LEAVES */
 @keyframes fall {
     0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
 }
 
-.leaf {
-    position: fixed;
-    top: -10vh;
-    font-size: 24px;
-    animation: fall linear infinite;
-    z-index: 0;
-    opacity: 0.8;
-}
-
-/* Generate 20 leaves */
 body::before {
     content: "🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂";
     position: fixed;
@@ -38,9 +28,10 @@ body::before {
     left: 0;
     width: 100%;
     font-size: 24px;
-    animation: fall 12s linear infinite;
+    animation: fall 14s linear infinite;
     pointer-events: none;
     opacity: 0.25;
+    z-index: 0;
 }
 
 /* HEADER */
@@ -59,12 +50,12 @@ header {
 
 .logo {
     font-family: 'Great Vibes', cursive;
-    font-size: 38px;
+    font-size: 40px;
     color: #d4ffd4;
-    text-shadow: 0 0 8px #1f7a1f;
+    text-shadow: 0 0 10px #1f7a1f;
 }
 
-/* BURGER MENU */
+/* BURGER */
 .burger {
     font-size: 34px;
     cursor: pointer;
@@ -72,7 +63,7 @@ header {
     text-shadow: 0 0 6px #1f7a1f;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav {
     display: none;
     flex-direction: column;
@@ -120,19 +111,26 @@ nav a:hover {
 .category:hover {
     background: #1f7a1f;
     box-shadow: 0 0 18px rgba(0, 255, 0, 0.25);
+    transform: scale(1.02);
 }
 
-/* EXPANDING CONTENT BOXES */
+/* INFO BOX */
 .content-box {
     display: none;
-    background: rgba(26, 26, 26, 0.9);
-    padding: 25px;
-    margin: 10px 25px;
-    border-radius: 14px;
+    background: rgba(26, 26, 26, 0.92);
+    padding: 30px;
+    margin: 20px 25px 60px;
+    border-radius: 16px;
     border: 1px solid #2fa02f;
-    box-shadow: 0 0 14px rgba(0, 255, 0, 0.15);
-    font-size: 18px;
-    line-height: 1.6;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.25);
+    font-size: 19px;
+    line-height: 1.7;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* BUTTONS */
@@ -152,6 +150,7 @@ button {
 button:hover {
     background: #2fa02f;
     box-shadow: 0 0 16px rgba(0, 255, 0, 0.35);
+    transform: scale(1.03);
 }
 
 /* POPUPS */
