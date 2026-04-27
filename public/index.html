@@ -6,15 +6,13 @@
     <meta name="description" content="Boardwalk Clay Nonprofit empowers youth, restores communities, and transforms neglected areas through training, mentorship, and hands-on service.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
     <link rel="icon" href="./assets/favicon.ico">
 
-    <!-- Social Preview -->
     <meta property="og:title" content="Boardwalk Clay Nonprofit">
     <meta property="og:description" content="Empowering youth. Restoring communities. Training the next generation of leaders.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -35,7 +33,7 @@
     <a href="./pages/contact.html">Contact</a>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section style="text-align:center; padding:60px 20px;">
     <h1 style="font-size:38px; margin-bottom:10px;">Empowering Youth. Restoring Communities.</h1>
     <p style="font-size:18px; max-width:700px; margin:auto;">
@@ -43,9 +41,17 @@
     </p>
 </section>
 
-<!-- CATEGORY SECTIONS -->
+<!-- CATEGORY BUTTONS -->
 <div class="category" data-target="mission">Our Mission</div>
-<div id="mission" class="content-box">
+<div class="category" data-target="youth">Youth Training</div>
+<div class="category" data-target="community">Community Service</div>
+<div class="category" data-target="sponsorships">Sponsorships</div>
+<div class="category" data-target="events">Events</div>
+<div class="category" data-target="donate">Donate</div>
+<div class="category" data-target="contact">Contact Us</div>
+
+<!-- HIDDEN CONTENT SECTIONS (DATA SOURCES) -->
+<div id="mission" class="hidden-content">
     <p>
         Our mission is simple but powerful: uplift the community by training youth, restoring neglected areas, and providing hands-on mentorship in tree work, cleanup, building, and environmental care.
     </p>
@@ -55,8 +61,7 @@
     <a href="./pages/community.html"><button>Learn More</button></a>
 </div>
 
-<div class="category" data-target="youth">Youth Training</div>
-<div id="youth" class="content-box">
+<div id="youth" class="hidden-content">
     <p>
         Our youth training program teaches tree climbing, safety, teamwork, environmental awareness, and leadership through real community projects.
     </p>
@@ -66,8 +71,7 @@
     <a href="./pages/youth.html"><button>Explore Youth Programs</button></a>
 </div>
 
-<div class="category" data-target="community">Community Service</div>
-<div id="community" class="content-box">
+<div id="community" class="hidden-content">
     <p>
         We take on neglected areas—overgrown lots, unsafe trees, trash-filled corners—and restore them with the help of youth, mentors, and volunteers.
     </p>
@@ -77,8 +81,7 @@
     <a href="./pages/community.html"><button>See Community Work</button></a>
 </div>
 
-<div class="category" data-target="sponsorships">Sponsorships</div>
-<div id="sponsorships" class="content-box">
+<div id="sponsorships" class="hidden-content">
     <p>
         Sponsorships directly support the people doing the work—youth trainees and the mentors who guide them.
     </p>
@@ -88,29 +91,29 @@
     <a href="./pages/sponsorships.html"><button>View Sponsorships</button></a>
 </div>
 
-<div class="category" data-target="events">Events</div>
-<div id="events" class="content-box">
+<div id="events" class="hidden-content">
     <p>
         Join us for cleanup days, tree work volunteer events, youth workshops, and community restoration projects.
     </p>
     <a href="./pages/events.html"><button>View Events</button></a>
 </div>
 
-<div class="category" data-target="donate">Donate</div>
-<div id="donate" class="content-box">
+<div id="donate" class="hidden-content">
     <p>
         Your support fuels everything we do—training youth, supporting mentors, restoring communities, and expanding our impact.
     </p>
     <a href="./pages/donate.html"><button>Donate Now</button></a>
 </div>
 
-<div class="category" data-target="contact">Contact Us</div>
-<div id="contact" class="content-box">
+<div id="contact" class="hidden-content">
     <p>
         Have questions, want to get involved, or want to partner with us? Reach out anytime.
     </p>
     <a href="./pages/contact.html"><button>Contact Page</button></a>
 </div>
+
+<!-- THE ONE INFO BOX -->
+<div id="info-box" class="content-box"></div>
 
 </body>
 </html>
