@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector("nav");
     const infoBox = document.getElementById("info-box");
 
+    // Ensure info box is hidden on load
+    infoBox.style.display = "none";
+
     // BURGER MENU
     if (burger) {
         burger.addEventListener("click", () => {
