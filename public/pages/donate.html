@@ -1,75 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Donate | Boardwalk Clay Nonprofit</title>
+    <title>Donate | Boardwalk Clay Organization</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Support Boardwalk Clay Nonprofit through donations that fund youth training, mentors, community cleanups, and restoration projects.">
+    <meta name="description" content="Support Boardwalk Clay Organization through donations that fund youth training, mentors, community cleanups, and restoration projects.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="../assets/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico">
 
-    <meta property="og:title" content="Boardwalk Clay Nonprofit - Donate">
+    <!-- Social Preview -->
+    <meta property="og:title" content="Boardwalk Clay Organization - Donate">
     <meta property="og:description" content="Help us train youth, support mentors, and restore communities.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <!-- Correct paths -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+
+    <style>
+        body {
+            background-image: url('/assets/donate.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hidden-content { display: none; }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="logo">
+        <img src="/assets/logo.png" class="logo-img">
+        Boardwalk Clay Organization
+    </div>
     <div class="burger">☰</div>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="community.html">Community Service</a>
-    <a href="sponsorships.html">Sponsorships</a>
-    <a href="youth.html">Youth Training</a>
-    <a href="mentors.html">Mentors</a>
-    <a href="events.html">Events</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="/pages/community.html">Community Service</a>
+    <a href="/pages/sponsorships.html">Sponsorships</a>
+    <a href="/pages/youth.html">Youth Training</a>
+    <a href="/pages/mentors.html">Mentors</a>
+    <a href="/pages/events.html">Events</a>
+    <a href="/pages/donate.html">Donate</a>
+    <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center;">Support Our Mission</h1>
+<h1 style="text-align:center; margin-top:40px;">Support Our Mission</h1>
 
-<div class="category" data-target="general-donation">General Donation</div>
-<div id="general-donation" class="content-box">
-    <p>Your donation helps fund:</p>
+<!-- CATEGORY BUTTONS -->
+<div class="category" data-target="general-donation">💚 General Donation</div>
+<div class="category" data-target="mentor-support">🌲 Support Mentors</div>
+<div class="category" data-target="youth-support">🌱 Support Youth Training</div>
+<div class="category" data-target="equipment">🧰 Equipment Donations</div>
+<div class="category" data-target="legal-info">📄 Legal & Tax Information</div>
+
+<!-- HIDDEN CONTENT SECTIONS -->
+<div id="general-donation" class="hidden-content">
+    <h2>💚 General Donation</h2>
+    <p>
+        Your donation fuels everything we do — from youth training to community restoration.  
+        Every dollar helps us reach more neighborhoods, train more youth, and support more mentors.
+    </p>
+    <p>Your contribution helps fund:</p>
     <ul>
-        <li>Cleanup supplies</li>
-        <li>Youth training gear</li>
-        <li>Mentor support</li>
-        <li>Fuel, tools, and safety equipment</li>
+        <li>Cleanup supplies and restoration materials</li>
+        <li>Youth training gear and safety equipment</li>
+        <li>Mentor support and certification costs</li>
+        <li>Fuel, tools, ropes, gloves, helmets, and more</li>
     </ul>
     <button data-popup="donate-popup">Donate via Email</button>
 </div>
 
-<div class="category" data-target="mentor-support">Support Mentors</div>
-<div id="mentor-support" class="content-box">
-    <p>Mentors lead, teach, and protect youth in the field.</p>
-    <a href="sponsorships.html"><button>View Mentor Sponsorship</button></a>
+<div id="mentor-support" class="hidden-content">
+    <h2>🌲 Support Mentors</h2>
+    <p>
+        Mentors are the heart of our mission.  
+        They train youth, lead projects, ensure safety, and guide young people toward leadership and responsibility.
+    </p>
+    <p>Your support helps provide:</p>
+    <ul>
+        <li>Professional safety gear and climbing equipment</li>
+        <li>Transportation to service sites</li>
+        <li>Time spent training and supervising youth</li>
+        <li>Ongoing certifications and skill development</li>
+    </ul>
+    <button onclick="location.href='/pages/sponsorships.html'">View Mentor Sponsorship</button>
 </div>
 
-<div class="category" data-target="youth-support">Support Youth Training</div>
-<div id="youth-support" class="content-box">
-    <p>Your donation helps cover gear, training, and safety equipment.</p>
-    <a href="sponsorships.html"><button>View Youth Sponsorship</button></a>
+<div id="youth-support" class="hidden-content">
+    <h2>🌱 Support Youth Training</h2>
+    <p>
+        Youth in our program learn real skills — tree climbing, safety, teamwork, environmental care, and even business fundamentals.  
+        Your support helps them grow into confident, capable leaders.
+    </p>
+    <p>Your donation helps cover:</p>
+    <ul>
+        <li>Helmets, harnesses, gloves, and ropes</li>
+        <li>Training program enrollment</li>
+        <li>Transportation and meals on service days</li>
+        <li>Tools and equipment for hands-on learning</li>
+    </ul>
+    <button onclick="location.href='/pages/sponsorships.html'">View Youth Sponsorship</button>
 </div>
 
-<div class="category" data-target="equipment">Equipment Donations</div>
-<div id="equipment" class="content-box">
-    <p>You can donate tools, ropes, gloves, helmets, or other gear.</p>
+<div id="equipment" class="hidden-content">
+    <h2>🧰 Equipment Donations</h2>
+    <p>
+        We gladly accept equipment donations that help youth and mentors work safely and effectively in the field.
+    </p>
+    <p>Useful items include:</p>
+    <ul>
+        <li>Ropes, saddles, harnesses, helmets</li>
+        <li>Gloves, boots, safety glasses</li>
+        <li>Hand tools, saws, rakes, shovels</li>
+        <li>Climbing gear and protective equipment</li>
+    </ul>
     <button data-popup="equipment-popup">Contact Us About Gear</button>
+</div>
+
+<div id="legal-info" class="hidden-content">
+    <h2>📄 Legal & Tax Information</h2>
+    <p>
+        Boardwalk Clay Organization operates as a nonprofit entity committed to community service, youth development, and environmental restoration.
+    </p>
+
+    <h3>✔ Tax-Deductible Donations</h3>
+    <p>
+        Donations may be tax-deductible depending on your location and current IRS/state regulations.  
+        We provide receipts for all contributions upon request.
+    </p>
+
+    <h3>✔ Transparency & Accountability</h3>
+    <p>
+        We maintain transparent financial practices and ensure all donations are used responsibly to support our mission.
+    </p>
+
+    <h3>✔ Required Legal Documents</h3>
+    <p>
+        You can review our legal policies here:
+    </p>
+    <ul>
+        <li><a href="/pages/legal.html">Nonprofit Legal Information</a></li>
+        <li><a href="/pages/terms.html">Terms & Conditions</a></li>
+        <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+    </ul>
+
+    <p>
+        If you need official documentation for tax or employer matching, contact us anytime.
+    </p>
 </div>
 
 <!-- POPUPS -->
 <div id="donate-popup" class="popup">
     <div class="popup-content">
         <h2>Donate to Boardwalk Clay</h2>
-        <p>Send us your donation details and we’ll follow up.</p>
+        <p>Send us your donation details and we’ll follow up with a receipt.</p>
         <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Donation&body=Name:%0D%0AAmount:%0D%0AOne-time%20or%20Recurring:'">Open Email</button>
         <br><br>
         <button class="close-popup">Close</button>
@@ -79,12 +168,15 @@
 <div id="equipment-popup" class="popup">
     <div class="popup-content">
         <h2>Equipment Donation</h2>
-        <p>Tell us what gear you’d like to donate.</p>
+        <p>Tell us what gear you’d like to donate and we’ll coordinate pickup or drop-off.</p>
         <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Equipment%20Donation&body=Item(s):%0D%0ACondition:%0D%0AContact%20Info:'">Open Email</button>
         <br><br>
         <button class="close-popup">Close</button>
     </div>
 </div>
+
+<!-- INFO BOX -->
+<div id="info-box" class="content-box"></div>
 
 </body>
 </html>
