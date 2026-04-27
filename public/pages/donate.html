@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Donate | Boardwalk Clay Nonprofit</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Support Boardwalk Clay Nonprofit through donations that fund youth training, mentors, community cleanups, and restoration projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../assets/favicon.ico">
+
+    <meta property="og:title" content="Boardwalk Clay Nonprofit - Donate">
+    <meta property="og:description" content="Help us train youth, support mentors, and restore communities.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="burger">☰</div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="community.html">Community Service</a>
+    <a href="sponsorships.html">Sponsorships</a>
+    <a href="youth.html">Youth Training</a>
+    <a href="mentors.html">Mentors</a>
+    <a href="events.html">Events</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1 style="text-align:center;">Support Our Mission</h1>
+
+<div class="category" data-target="general-donation">General Donation</div>
+<div id="general-donation" class="content-box">
+    <p>Your donation helps fund:</p>
+    <ul>
+        <li>Cleanup supplies</li>
+        <li>Youth training gear</li>
+        <li>Mentor support</li>
+        <li>Fuel, tools, and safety equipment</li>
+    </ul>
+    <button data-popup="donate-popup">Donate via Email</button>
+</div>
+
+<div class="category" data-target="mentor-support">Support Mentors</div>
+<div id="mentor-support" class="content-box">
+    <p>Mentors lead, teach, and protect youth in the field.</p>
+    <a href="sponsorships.html"><button>View Mentor Sponsorship</button></a>
+</div>
+
+<div class="category" data-target="youth-support">Support Youth Training</div>
+<div id="youth-support" class="content-box">
+    <p>Your donation helps cover gear, training, and safety equipment.</p>
+    <a href="sponsorships.html"><button>View Youth Sponsorship</button></a>
+</div>
+
+<div class="category" data-target="equipment">Equipment Donations</div>
+<div id="equipment" class="content-box">
+    <p>You can donate tools, ropes, gloves, helmets, or other gear.</p>
+    <button data-popup="equipment-popup">Contact Us About Gear</button>
+</div>
+
+<!-- POPUPS -->
+<div id="donate-popup" class="popup">
+    <div class="popup-content">
+        <h2>Donate to Boardwalk Clay</h2>
+        <p>Send us your donation details and we’ll follow up.</p>
+        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Donation&body=Name:%0D%0AAmount:%0D%0AOne-time%20or%20Recurring:'">Open Email</button>
+        <br><br>
+        <button class="close-popup">Close</button>
+    </div>
+</div>
+
+<div id="equipment-popup" class="popup">
+    <div class="popup-content">
+        <h2>Equipment Donation</h2>
+        <p>Tell us what gear you’d like to donate.</p>
+        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Equipment%20Donation&body=Item(s):%0D%0ACondition:%0D%0AContact%20Info:'">Open Email</button>
+        <br><br>
+        <button class="close-popup">Close</button>
+    </div>
+</div>
+
+</body>
+</html>
