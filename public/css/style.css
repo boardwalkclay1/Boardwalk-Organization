@@ -15,6 +15,26 @@ body {
     overflow-x: hidden;
 }
 
+/* GLOBAL LOGO FIX — applies to ALL pages */
+.logo-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.35);
+}
+
+/* HEADER LOGO TEXT FIX */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    color: #d4ffd4;
+    text-shadow: 0 0 10px #1f7a1f;
+}
+
 /* FALLING LEAVES */
 @keyframes fall {
     0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
@@ -46,13 +66,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-}
-
-.logo {
-    font-family: 'Great Vibes', cursive;
-    font-size: 40px;
-    color: #d4ffd4;
-    text-shadow: 0 0 10px #1f7a1f;
 }
 
 /* BURGER */
