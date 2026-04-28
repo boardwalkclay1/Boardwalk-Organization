@@ -15,7 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-/* GLOBAL LOGO FIX — applies to ALL pages */
+/* GLOBAL LOGO FIX */
 .logo-img {
     width: 55px;
     height: 55px;
@@ -24,65 +24,57 @@ body {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.35);
 }
 
-/* HEADER LOGO TEXT FIX */
+/* HEADER — BROWN + GREEN FOREST BAR */
+header {
+    background: linear-gradient(to right, #3b2a1a, #145214);
+    padding: 22px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #2fa02f;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* HEADER LOGO TEXT */
 header .logo {
     display: flex;
     align-items: center;
     gap: 12px;
     font-family: 'Great Vibes', cursive;
     font-size: 40px;
-    color: #d4ffd4;
-    text-shadow: 0 0 10px #1f7a1f;
+    color: #f4ffe8;
+    text-shadow: 0 0 12px #2fa02f;
 }
 
-/* FALLING LEAVES */
-@keyframes fall {
-    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-}
-
-body::before {
-    content: "🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂 🍁 🍃 🍂";
-    position: fixed;
-    top: -10vh;
-    left: 0;
-    width: 100%;
-    font-size: 24px;
-    animation: fall 14s linear infinite;
-    pointer-events: none;
+/* HEADER LEAF ACCENTS */
+header::after {
+    content: "🍃 🍂 🍁";
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
     opacity: 0.25;
-    z-index: 0;
-}
-
-/* HEADER */
-header {
-    background: linear-gradient(to right, #0a2e0a, #145214);
-    padding: 22px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #1f7a1f;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    font-size: 22px;
 }
 
 /* BURGER */
 .burger {
     font-size: 34px;
     cursor: pointer;
-    color: #d4ffd4;
-    text-shadow: 0 0 6px #1f7a1f;
+    color: #f4ffe8;
+    text-shadow: 0 0 6px #2fa02f;
 }
 
 /* NAV */
 nav {
     display: none;
     flex-direction: column;
-    background: #0a2e0a;
+    background: #1a2e1a;
     padding: 20px;
-    border-bottom: 2px solid #1f7a1f;
+    border-bottom: 2px solid #2fa02f;
 }
 
 nav a {
@@ -94,48 +86,43 @@ nav a {
 }
 
 nav a:hover {
-    color: #9aff9a;
+    color: #b8ffb8;
     text-shadow: 0 0 6px #2fa02f;
 }
 
 /* CATEGORY BUTTONS */
 .category {
-    background: linear-gradient(145deg, #145214, #0f3d0f);
+    background: linear-gradient(145deg, #2f4d2f, #1e351e);
     padding: 22px;
     margin: 25px;
     border-radius: 18px;
     cursor: pointer;
     font-size: 22px;
     transition: 0.3s;
-    border: 1px solid #1f7a1f;
+    border: 1px solid #2fa02f;
     box-shadow: 0 0 12px rgba(0, 255, 0, 0.15);
     position: relative;
 }
 
-.category::after {
-    content: "🌿";
-    position: absolute;
-    right: 20px;
-    top: 18px;
-    font-size: 22px;
-    opacity: 0.8;
+/* COMMUNITY PAGE ONLY — HIDE CATEGORY TEXT */
+body.community-page .category {
+    color: transparent !important;
+    text-shadow: none !important;
 }
 
-.category:hover {
-    background: #1f7a1f;
-    box-shadow: 0 0 18px rgba(0, 255, 0, 0.25);
-    transform: scale(1.02);
+body.community-page .category::after {
+    content: "" !important;
 }
 
-/* INFO BOX */
+/* INFO BOX — BUBBLE BLOCKS */
 .content-box {
     display: none;
-    background: rgba(26, 26, 26, 0.92);
+    background: rgba(40, 30, 20, 0.85);
     padding: 30px;
     margin: 20px 25px 60px;
-    border-radius: 16px;
+    border-radius: 18px;
     border: 1px solid #2fa02f;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.25);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.25);
     font-size: 19px;
     line-height: 1.7;
     animation: fadeIn 0.4s ease-out;
@@ -148,7 +135,7 @@ nav a:hover {
 
 /* BUTTONS */
 button {
-    background: linear-gradient(145deg, #1f7a1f, #145214);
+    background: linear-gradient(145deg, #2fa02f, #145214);
     border: none;
     padding: 14px 24px;
     border-radius: 14px;
@@ -161,7 +148,7 @@ button {
 }
 
 button:hover {
-    background: #2fa02f;
+    background: #3fcf3f;
     box-shadow: 0 0 16px rgba(0, 255, 0, 0.35);
     transform: scale(1.03);
 }
@@ -181,7 +168,7 @@ button:hover {
 }
 
 .popup-content {
-    background: #1a1a1a;
+    background: rgba(40, 30, 20, 0.95);
     padding: 35px;
     border-radius: 18px;
     width: 80%;
