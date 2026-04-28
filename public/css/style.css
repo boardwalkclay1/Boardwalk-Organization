@@ -5,24 +5,48 @@
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Great+Vibes&display=swap');
 
-/* GLOBAL */
+/* ============================================================
+   GLOBAL BASE — NO BACKGROUND IMAGE HERE
+   ============================================================ */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Marcellus', serif;
-
-    /* FIXED — ALLOW PAGE BACKGROUNDS TO SHOW */
-    background-color: #0b0f0b;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
+    background-color: #0b0f0b; /* fallback */
     color: #e8ffe8;
     overflow-x: hidden;
 }
 
-/* GLOBAL LOGO FIX */
+/* ============================================================
+   INDEX PAGE ONLY — BACKGROUND IMAGE
+   ============================================================ */
+body.index-page {
+    background-image: url('/images/bco-logo-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* mobile safe */
+}
+
+/* DESKTOP PARALLAX */
+@media (min-width: 900px) {
+    body.index-page {
+        background-attachment: fixed;
+    }
+}
+
+/* iPHONE + ANDROID FIX */
+@supports (-webkit-touch-callout: none) {
+    body.index-page {
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
 .logo-img {
     width: 55px;
     height: 55px;
@@ -31,7 +55,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.35);
 }
 
-/* HEADER — BROWN + GREEN FOREST BAR */
+/* ============================================================
+   HEADER
+   ============================================================ */
 header {
     background: linear-gradient(to right, #3b2a1a, #145214);
     padding: 22px;
@@ -46,7 +72,6 @@ header {
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* HEADER LOGO TEXT */
 header .logo {
     display: flex;
     align-items: center;
@@ -57,7 +82,6 @@ header .logo {
     text-shadow: 0 0 12px #2fa02f;
 }
 
-/* HEADER LEAF ACCENTS */
 header::after {
     content: "🍃 🍂 🍁";
     position: absolute;
@@ -67,7 +91,9 @@ header::after {
     font-size: 22px;
 }
 
-/* BURGER */
+/* ============================================================
+   BURGER MENU
+   ============================================================ */
 .burger {
     font-size: 34px;
     cursor: pointer;
@@ -75,7 +101,9 @@ header::after {
     text-shadow: 0 0 6px #2fa02f;
 }
 
-/* NAV */
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
 nav {
     display: none;
     flex-direction: column;
@@ -97,7 +125,9 @@ nav a:hover {
     text-shadow: 0 0 6px #2fa02f;
 }
 
-/* CATEGORY BUTTONS */
+/* ============================================================
+   CATEGORY BUTTONS
+   ============================================================ */
 .category {
     background: linear-gradient(145deg, #2f4d2f, #1e351e);
     padding: 22px;
@@ -111,7 +141,7 @@ nav a:hover {
     position: relative;
 }
 
-/* COMMUNITY PAGE ONLY — HIDE CATEGORY TEXT */
+/* COMMUNITY PAGE SPECIAL MODE */
 body.community-page .category {
     color: transparent !important;
     text-shadow: none !important;
@@ -121,7 +151,9 @@ body.community-page .category::after {
     content: "" !important;
 }
 
-/* INFO BOX — BUBBLE BLOCKS */
+/* ============================================================
+   CONTENT BOXES
+   ============================================================ */
 .content-box {
     display: none;
     background: rgba(40, 30, 20, 0.85);
@@ -140,7 +172,9 @@ body.community-page .category::after {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* BUTTONS */
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 button {
     background: linear-gradient(145deg, #2fa02f, #145214);
     border: none;
@@ -160,7 +194,9 @@ button:hover {
     transform: scale(1.03);
 }
 
-/* POPUPS */
+/* ============================================================
+   POPUPS
+   ============================================================ */
 .popup {
     display: none;
     position: fixed;
