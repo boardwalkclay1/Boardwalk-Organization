@@ -1,168 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Board Dashboard | Boardwalk Clay Organization</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boardwalk Clay Organization</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Boardwalk Clay Organization is a non-profit empowering youth and restoring communities through hands-on service, mentorship, and real-world training.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="/assets/favicon.ico">
-  <link rel="stylesheet" href="/css/admin.css">
-  <script src="/js/board.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/bco-logo.png">
+
+    <!-- Social Preview -->
+    <meta property="og:title" content="Boardwalk Clay Organization — A Non-Profit">
+    <meta property="og:description" content="Empowering youth. Restoring communities. Training the next generation of leaders.">
+
+    <!-- CORRECT PATHS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url('/images/bco-logo-back.jpg') center/cover no-repeat fixed;
+            color: #fff;
+        }
+
+        .hidden-content { display: none; }
+    </style>
 </head>
-<body class="admin-body">
 
-<header class="admin-header">
-  <div class="admin-logo">
-    <img src="/assets/logo.png" class="logo-img">
-    <div class="admin-title">
-      <span class="admin-org">Boardwalk Clay Organization</span>
-      <span class="admin-sub">Board Member Dashboard</span>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/images/bco-logo.png" class="logo-img">
+        Boardwalk Clay Organization
     </div>
-  </div>
-  <div class="admin-header-right">
-    <span class="admin-role-badge board-badge">Board Member</span>
-    <button class="admin-header-btn">Log Out</button>
-  </div>
+    <div class="burger">☰</div>
 </header>
 
-<main class="admin-layout">
-  <aside class="admin-sidebar">
-    <div class="sidebar-section-label">My Work</div>
-    <button data-panel="my-overview" class="sidebar-btn active">My Overview</button>
-    <button data-panel="my-tasks" class="sidebar-btn">My Tasks</button>
-    <button data-panel="messages" class="sidebar-btn">Board Messages</button>
+<nav>
+    <a href="/index.html">Home</a>
+    <a href="/pages/community.html">Community Service</a>
+    <a href="/pages/sponsorships.html">Sponsorships</a>
+    <a href="/pages/youth.html">Youth Training</a>
+    <a href="/pages/mentors.html">Mentors</a>
+    <a href="/pages/events.html">Events</a>
+    <a href="/pages/donate.html">Donate</a>
+    <a href="/pages/contact.html">Contact</a>
+</nav>
 
-    <div class="sidebar-section-label">Resources</div>
-    <button data-panel="docs" class="sidebar-btn">Shared Documents</button>
-    <button data-panel="events" class="sidebar-btn">Events & Calendar</button>
-    <button data-panel="youth-notes" class="sidebar-btn">Youth & Program Notes</button>
-    <button data-panel="sponsor-tools" class="sidebar-btn">Sponsor & Donor Tools</button>
-  </aside>
+<!-- HERO -->
+<section style="text-align:center; padding:60px 20px;">
+    <h1 style="font-size:42px; margin-bottom:5px;">Boardwalk Clay Organization</h1>
+    <h3 style="margin-top:0; font-size:22px; opacity:0.8;">A Non-Profit</h3>
+    <p style="font-size:20px; max-width:750px; margin:auto;">
+        We restore communities, empower youth, and rebuild forgotten spaces through hands-on service, mentorship, and real-world training.  
+        Every project we take on transforms both the land and the young people who help rebuild it.
+    </p>
+</section>
 
-  <section id="board-panel" class="admin-panel">
-    <div class="panel-view" id="panel-my-overview">
-      <h2>My Overview</h2>
-      <div class="grid-3">
-        <div class="stat-card">
-          <h3>My Open Tasks</h3>
-          <p class="stat-number">5</p>
-          <p class="stat-sub">Assigned to you</p>
-        </div>
-        <div class="stat-card">
-          <h3>Upcoming Events</h3>
-          <p class="stat-number">2</p>
-          <p class="stat-sub">You’re involved in</p>
-        </div>
-        <div class="stat-card">
-          <h3>Unread Messages</h3>
-          <p class="stat-number">3</p>
-          <p class="stat-sub">Across board channels</p>
-        </div>
-      </div>
-    </div>
+<!-- CATEGORY BUTTONS -->
+<div class="category" data-target="mission">🌱 Our Mission</div>
+<div class="category" data-target="youth">🌿 Youth Training</div>
+<div class="category" data-target="community">🌳 Community Service</div>
+<div class="category" data-target="sponsorships">🤝 Sponsorships</div>
+<div class="category" data-target="events">📅 Events</div>
+<div class="category" data-target="donate">💚 Donate</div>
+<div class="category" data-target="contact">📬 Contact Us</div>
 
-    <div class="panel-view hidden" id="panel-my-tasks">
-      <h2>My Tasks</h2>
-      <div class="panel-box">
-        <h3>Assigned Tasks</h3>
-        <div class="task-columns">
-          <div class="task-column">
-            <h4>Not Started</h4>
-            <div class="task-card">
-              <h5>Call sponsor lead</h5>
-              <p>Due: Friday</p>
-            </div>
-          </div>
-          <div class="task-column">
-            <h4>In Progress</h4>
-            <div class="task-card">
-              <h5>Prepare youth training notes</h5>
-              <p>Due: Next week</p>
-            </div>
-          </div>
-          <div class="task-column">
-            <h4>Completed</h4>
-            <div class="task-card">
-              <h5>Confirm event volunteers</h5>
-              <p>Done</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- HIDDEN CONTENT SECTIONS -->
+<div id="mission" class="hidden-content">
+    <h2>🌱 Our Mission</h2>
+    <p>
+        At Boardwalk Clay Organization, our mission is rooted in growth — growth of our youth, growth of our neighborhoods, and growth of the community as a whole.  
+        We transform neglected spaces, train young leaders, and create opportunities for real change.
+    </p>
+    <button onclick="location.href='/pages/community.html'">Explore Our Mission</button>
+</div>
 
-    <div class="panel-view hidden" id="panel-messages">
-      <h2>Board Messages</h2>
-      <div class="panel-split">
-        <div class="panel-box">
-          <h3>Channels</h3>
-          <ul class="channel-list">
-            <li class="channel active"># board-general</li>
-            <li class="channel"># youth-programs</li>
-            <li class="channel"># sponsors-finance</li>
-          </ul>
-        </div>
-        <div class="panel-box">
-          <h3># board-general</h3>
-          <div class="message-thread">
-            <div class="message">
-              <span class="message-author">Admin</span>
-              <span class="message-text">Reminder: board meeting next Thursday.</span>
-            </div>
-          </div>
-          <div class="message-input-row">
-            <input type="text" placeholder="Type a message...">
-            <button class="small-btn">Send</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<div id="youth" class="hidden-content">
+    <h2>🌿 Youth Training</h2>
+    <p>
+        Our youth training program gives young people real-world experience in tree climbing, safety, teamwork, environmental care, and leadership.
+    </p>
+    <button onclick="location.href='/pages/youth.html'">Learn About Youth Training</button>
+</div>
 
-    <div class="panel-view hidden" id="panel-docs">
-      <h2>Shared Documents</h2>
-      <div class="panel-box">
-        <h3>Key Files</h3>
-        <ul class="doc-list">
-          <li><span class="tag tag-doc">Agenda</span> Next Board Meeting Agenda</li>
-          <li><span class="tag tag-doc">Program</span> Youth Training Outline</li>
-          <li><span class="tag tag-doc">Sponsors</span> Current Sponsor List</li>
-        </ul>
-      </div>
-    </div>
+<div id="community" class="hidden-content">
+    <h2>🌳 Community Service</h2>
+    <p>
+        We go where help is needed most — abandoned lots, overgrown areas, unsafe trees, and forgotten corners of the community.
+    </p>
+    <button onclick="location.href='/pages/community.html'">See Community Impact</button>
+</div>
 
-    <div class="panel-view hidden" id="panel-events">
-      <h2>Events & Calendar</h2>
-      <div class="panel-box">
-        <h3>My Events</h3>
-        <ul class="event-list">
-          <li><strong>Youth Cleanup Day</strong> – You’re marked as attending.</li>
-          <li><strong>Board Strategy Meeting</strong> – You’re required.</li>
-        </ul>
-      </div>
-    </div>
+<div id="sponsorships" class="hidden-content">
+    <h2>🤝 Sponsorships</h2>
+    <p>
+        Sponsorships directly support the youth learning the skills and the mentors guiding them.
+    </p>
+    <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Options</button>
+</div>
 
-    <div class="panel-view hidden" id="panel-youth-notes">
-      <h2>Youth & Program Notes</h2>
-      <div class="panel-box">
-        <h3>Field Notes</h3>
-        <p>Use this area (later via JS + DB) to log youth progress, ideas, and observations.</p>
-      </div>
-    </div>
+<div id="events" class="hidden-content">
+    <h2>📅 Events</h2>
+    <p>
+        Our events bring the community together — volunteers, youth, mentors, and supporters all working side-by-side.
+    </p>
+    <button onclick="location.href='/pages/events.html'">See Upcoming Events</button>
+</div>
 
-    <div class="panel-view hidden" id="panel-sponsor-tools">
-      <h2>Sponsor & Donor Tools</h2>
-      <div class="panel-box">
-        <h3>Quick Actions</h3>
-        <div class="quick-actions">
-          <button class="qa-btn">Log Sponsor Call</button>
-          <button class="qa-btn">Send Follow-Up Template</button>
-          <button class="qa-btn">Add Sponsor Note</button>
-        </div>
-      </div>
-    </div>
+<div id="donate" class="hidden-content">
+    <h2>💚 Donate</h2>
+    <p>
+        Every donation fuels our mission — from gear and tools to youth training and mentor support.
+    </p>
+    <button onclick="location.href='/pages/donate.html'">Support the Mission</button>
+</div>
 
-  </section>
-</main>
+<div id="contact" class="hidden-content">
+    <h2>📬 Contact Us</h2>
+    <p>
+        Whether you want to volunteer, partner with us, sponsor a youth, or simply learn more — we’re here to talk.
+    </p>
+    <button onclick="location.href='/pages/contact.html'">Reach Out</button>
+</div>
 
 </body>
 </html>
