@@ -6,8 +6,8 @@
     <meta name="description" content="Community gatherings, cleanups, tree work days, youth workshops, and skill-building events with Boardwalk Clay Organization.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/images/bco-logo.png">
+    <!-- Correct Favicon -->
+    <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
 
     <!-- Social Preview -->
     <meta property="og:title" content="Boardwalk Clay Organization - Events">
@@ -26,8 +26,35 @@
             background-attachment: fixed;
         }
         .hidden-content { display: none; }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            background: linear-gradient(to right, #3b2a1a, #145214);
+            padding: 35px 20px;
+            text-align: center;
+            border-top: 3px solid #2fa02f;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+        }
+
+        footer img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,255,0,0.35);
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            margin: 6px 0;
+            font-size: 18px;
+            color: #e8ffe8;
+            text-shadow: 0 0 6px #1f7a1f;
+        }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -57,13 +84,13 @@
 <div class="category" data-target="youth-workshop">🌱 Youth Training Workshop</div>
 
 <!-- HIDDEN CONTENT SECTIONS -->
-<div id="cleanup-day" class="hidden-content">
+<div id="cleanup-day" class="hidden-content content-box">
     <h2>🧹 Neighborhood Cleanup Day</h2>
     <p><strong>Date:</strong> Every 2nd Saturday</p>
     <p><strong>Location:</strong> Rotating neighborhoods</p>
 
     <p>
-        Our cleanup days are more than just picking up trash — they are **community gatherings** where neighbors, youth, mentors, and volunteers come together to restore pride and safety in overlooked areas.
+        Our cleanup days are more than just picking up trash — they are <strong>community gatherings</strong> where neighbors, youth, mentors, and volunteers come together to restore pride and safety in overlooked areas.
     </p>
 
     <p>These events often include:</p>
@@ -72,23 +99,19 @@
         <li>Cookouts and community meals after the work is done</li>
         <li>Networking between families, youth, and local leaders</li>
         <li>Live demonstrations on knots, rope handling, and safety basics</li>
-        <li>Mentors teaching youth how to work as a team in the field</li>
+        <li>Mentors teaching youth teamwork and field safety</li>
     </ul>
-
-    <p>
-        Cleanup days teach youth responsibility, leadership, and the importance of giving back — while strengthening the community around them.
-    </p>
 
     <button data-popup="cleanup-popup">Sign Up</button>
 </div>
 
-<div id="tree-work" class="hidden-content">
+<div id="tree-work" class="hidden-content content-box">
     <h2>🌳 Tree Work Volunteer Day</h2>
     <p><strong>Date:</strong> Monthly</p>
     <p><strong>Location:</strong> Announced weekly</p>
 
     <p>
-        Tree Work Day is where youth get hands-on experience with **real arborist skills** under mentor supervision.  
+        Tree Work Day is where youth get hands-on experience with <strong>real arborist skills</strong> under mentor supervision.  
         Volunteers help with ground support, cleanup, and environmental care.
     </p>
 
@@ -97,25 +120,21 @@
         <li>Tree trimming and hazard removal</li>
         <li>Climbing demonstrations by trained youth and mentors</li>
         <li>Lessons on knots, rigging, and rope safety</li>
-        <li>Discussions on environmental stewardship and tree health</li>
-        <li>Cookouts and community bonding after the work is complete</li>
+        <li>Environmental stewardship discussions</li>
+        <li>Cookouts and community bonding afterward</li>
     </ul>
-
-    <p>
-        Youth learn discipline, focus, and confidence — and volunteers get to be part of their growth.
-    </p>
 
     <button data-popup="tree-popup">Sign Up</button>
 </div>
 
-<div id="youth-workshop" class="hidden-content">
+<div id="youth-workshop" class="hidden-content content-box">
     <h2>🌱 Youth Training Workshop</h2>
     <p><strong>Date:</strong> Twice per month</p>
     <p><strong>Location:</strong> Boardwalk Clay Training Grounds</p>
 
     <p>
-        Our workshops are **full training days** where youth learn professional tree climbing, safety, teamwork, and leadership.  
-        These are structured sessions designed to build real skills and real confidence.
+        Our workshops are <strong>full training days</strong> where youth learn professional tree climbing, safety, teamwork, and leadership.  
+        These sessions build real skills and real confidence.
     </p>
 
     <p>Workshops include:</p>
@@ -123,13 +142,9 @@
         <li>Climbing practice with harnesses, ropes, and helmets</li>
         <li>Knot-tying lessons and rope management drills</li>
         <li>Team-building exercises and leadership challenges</li>
-        <li>Business lessons: finding clients, giving estimates, professionalism</li>
-        <li>Networking with mentors, volunteers, and community partners</li>
+        <li>Business lessons: estimates, professionalism, communication</li>
+        <li>Networking with mentors and community partners</li>
     </ul>
-
-    <p>
-        These workshops prepare youth not just for tree work — but for **life**, teaching discipline, communication, and how to carry themselves professionally.
-    </p>
 
     <button data-popup="youth-popup">Sign Up</button>
 </div>
@@ -139,7 +154,9 @@
     <div class="popup-content">
         <h2>Sign Up for Cleanup Day</h2>
         <p>Send us your name and availability.</p>
-        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Cleanup%20Day%20Volunteer&body=Name:%0D%0AAvailability:%0D%0A'">Open Email</button>
+        <button onclick="window.location.href='mailto:boardwalkorganization@gmail.com?subject=Cleanup%20Day%20Volunteer&body=Name:%0D%0AAvailability:%0D%0A'">
+            Open Email
+        </button>
         <br><br>
         <button class="close-popup">Close</button>
     </div>
@@ -149,7 +166,9 @@
     <div class="popup-content">
         <h2>Sign Up for Tree Work Day</h2>
         <p>Send us your name and experience level.</p>
-        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Tree%20Work%20Volunteer&body=Name:%0D%0AExperience:%0D%0AAvailability:'">Open Email</button>
+        <button onclick="window.location.href='mailto:boardwalkorganization@gmail.com?subject=Tree%20Work%20Volunteer&body=Name:%0D%0AExperience:%0D%0AAvailability:'">
+            Open Email
+        </button>
         <br><br>
         <button class="close-popup">Close</button>
     </div>
@@ -159,11 +178,22 @@
     <div class="popup-content">
         <h2>Youth Workshop Sign-Up</h2>
         <p>Send us your youth’s name and age.</p>
-        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Youth%20Workshop%20Sign-Up&body=Youth%20Name:%0D%0AAge:%0D%0AParent/Guardian%20Name:%0D%0A'">Open Email</button>
+        <button onclick="window.location.href='mailto:boardwalkorganization@gmail.com?subject=Youth%20Workshop%20Sign-Up&body=Youth%20Name:%0D%0AAge:%0D%0AParent/Guardian%20Name:%0D%0A'">
+            Open Email
+        </button>
         <br><br>
         <button class="close-popup">Close</button>
     </div>
 </div>
+
+<!-- FOOTER -->
+<footer>
+    <img src="/images/bco-logo.png" alt="Boardwalk Clay Logo">
+    <p><strong>Boardwalk Clay Organization</strong></p>
+    <p>Email: <strong>boardwalkorganization@gmail.com</strong></p>
+    <p>Phone: <strong>(678) 683‑0570</strong></p>
+    <p>Serving the Atlanta Metro Area & Surrounding Communities</p>
+</footer>
 
 </body>
 </html>
