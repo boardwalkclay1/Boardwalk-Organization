@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact | Boardwalk Clay Nonprofit</title>
+    <title>Contact | Boardwalk Clay Organization</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Contact Boardwalk Clay Nonprofit for volunteering, sponsorships, youth training, or community service inquiries.">
+    <meta name="description" content="Contact Boardwalk Clay Organization for volunteering, sponsorships, youth training, or community service inquiries.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="../assets/favicon.ico">
+    <!-- Correct Favicon -->
+    <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
 
-    <meta property="og:title" content="Boardwalk Clay Nonprofit - Contact">
+    <!-- Social Preview -->
+    <meta property="og:title" content="Boardwalk Clay Organization - Contact">
     <meta property="og:description" content="Reach out to us for questions, support, or involvement.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <!-- Correct paths -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+
+    <style>
+        body {
+            background-image: url('/images/bco-contact.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hidden-content { display: none; }
+    </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="logo">
+        <img src="/images/bco-logo.png" class="logo-img">
+        Boardwalk Clay Organization
+    </div>
     <div class="burger">☰</div>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="community.html">Community Service</a>
-    <a href="sponsorships.html">Sponsorships</a>
-    <a href="youth.html">Youth Training</a>
-    <a href="mentors.html">Mentors</a>
-    <a href="events.html">Events</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="/pages/community.html">Community Service</a>
+    <a href="/pages/sponsorships.html">Sponsorships</a>
+    <a href="/pages/youth.html">Youth Training</a>
+    <a href="/pages/mentors.html">Mentors</a>
+    <a href="/pages/events.html">Events</a>
+    <a href="/pages/donate.html">Donate</a>
+    <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center;">Contact Us</h1>
+<h1 style="text-align:center; margin-top:40px;">Contact Us</h1>
 
-<div class="category" data-target="email">Email Us</div>
+<!-- CATEGORY BUTTONS -->
+<div class="category" data-target="email">📧 Email Us</div>
 <div id="email" class="content-box">
     <p>For all inquiries:</p>
     <p><strong>boardwalkclay1@gmail.com</strong></p>
-    <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Contact%20Request'">Send Email</button>
+    <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Contact%20Request'">
+        Send Email
+    </button>
 </div>
 
-<div class="category" data-target="phone">Call Us</div>
+<div class="category" data-target="phone">📞 Call Us</div>
 <div id="phone" class="content-box">
     <p>Phone:</p>
     <p><strong>(678) 683‑0570</strong></p>
 </div>
 
-<div class="category" data-target="social">Social Media</div>
+<div class="category" data-target="social">🌐 Social Media</div>
 <div id="social" class="content-box">
     <p>Follow us for updates, events, and community impact stories.</p>
     <ul>
@@ -58,7 +78,7 @@
     </ul>
 </div>
 
-<div class="category" data-target="visit">Visit Us</div>
+<div class="category" data-target="visit">📍 Visit Us</div>
 <div id="visit" class="content-box">
     <p>We operate throughout the Atlanta metro area and surrounding communities.</p>
 </div>
