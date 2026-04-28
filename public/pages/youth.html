@@ -6,8 +6,8 @@
     <meta name="description" content="Youth training in professional tree climbing, safety, environmental care, business skills, and community service with Boardwalk Clay Organization.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/images/bco-logo.png">
+    <!-- Favicon (properly sized) -->
+    <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
 
     <!-- Social Preview -->
     <meta property="og:title" content="Boardwalk Clay Organization - Youth Training">
@@ -25,7 +25,26 @@
             background-position: center;
             background-attachment: fixed;
         }
+
         .hidden-content { display: none; }
+
+        /* FIXED LOGO SIZING */
+        .logo-img {
+            width: 55px;       /* perfect size */
+            height: 55px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.35);
+        }
+
+        /* Optional: keep header clean */
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
