@@ -13,14 +13,19 @@
     <meta property="og:title" content="Boardwalk Clay Organization — A Non-Profit">
     <meta property="og:description" content="Empowering youth. Restoring communities. Training the next generation of leaders.">
 
-    <!-- CORRECT PATHS (NO DOTS REMOVED, SLASHES KEPT) -->
+    <!-- CORRECT PATHS -->
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js" defer></script>
 
+    <!-- FORCE BACKGROUND TO SHOW -->
     <style>
+        body {
+            background: url('/images/bco-logo-back.jpg') center/cover no-repeat fixed !important;
+        }
         .hidden-content { display: none; }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -65,11 +70,7 @@
 <div id="mission" class="hidden-content">
     <h2>🌱 Our Mission</h2>
     <p>
-        At Boardwalk Clay Organization, our mission is rooted in growth — growth of our youth, growth of our neighborhoods, and growth of the community as a whole.  
-        We transform neglected spaces, train young leaders, and create opportunities for real change.
-    </p>
-    <p>
-        Visit the <strong>Community Service</strong> page to see the neighborhoods we restore and the lives we impact.
+        At Boardwalk Clay Organization, our mission is rooted in growth — growth of our youth, growth of our neighborhoods, and growth of the community as a whole.
     </p>
     <button onclick="location.href='/pages/community.html'">Explore Our Mission</button>
 </div>
@@ -77,11 +78,7 @@
 <div id="youth" class="hidden-content">
     <h2>🌿 Youth Training</h2>
     <p>
-        Our youth training program gives young people real-world experience in tree climbing, safety, teamwork, environmental care, and leadership.  
-        They don’t just learn — they participate in real service projects that build confidence, discipline, and purpose.
-    </p>
-    <p>
-        The <strong>Youth Training</strong> page explains how the program works, what youth learn, and how families can get involved.
+        Our youth training program gives young people real-world experience in tree climbing, safety, teamwork, environmental care, and leadership.
     </p>
     <button onclick="location.href='/pages/youth.html'">Learn About Youth Training</button>
 </div>
@@ -89,11 +86,7 @@
 <div id="community" class="hidden-content">
     <h2>🌳 Community Service</h2>
     <p>
-        We go where help is needed most — abandoned lots, overgrown areas, unsafe trees, and forgotten corners of the community.  
-        Our teams restore, rebuild, and bring life back to these spaces through consistent, hands-on work.
-    </p>
-    <p>
-        On the <strong>Community Service</strong> page, you’ll see upcoming service opportunities, past projects, and ways you can join us in the field.
+        We go where help is needed most — abandoned lots, overgrown areas, unsafe trees, and forgotten corners of the community.
     </p>
     <button onclick="location.href='/pages/community.html'">See Community Impact</button>
 </div>
@@ -101,12 +94,7 @@
 <div id="sponsorships" class="hidden-content">
     <h2>🤝 Sponsorships</h2>
     <p>
-        Sponsorships are the backbone of our mission.  
-        They directly support the youth learning the skills and the mentors guiding them.  
-        Your sponsorship helps fund training, gear, safety equipment, transportation, and community restoration projects.
-    </p>
-    <p>
-        The <strong>Sponsorships</strong> page breaks down each option and shows how your support creates real change.
+        Sponsorships directly support the youth learning the skills and the mentors guiding them.
     </p>
     <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Options</button>
 </div>
@@ -114,11 +102,7 @@
 <div id="events" class="hidden-content">
     <h2>📅 Events</h2>
     <p>
-        Our events bring the community together — volunteers, youth, mentors, and supporters all working side-by-side.  
-        From cleanup days to youth workshops, every event is an opportunity to make a difference.
-    </p>
-    <p>
-        The <strong>Events</strong> page lists upcoming opportunities and lets you sign up instantly.
+        Our events bring the community together — volunteers, youth, mentors, and supporters all working side-by-side.
     </p>
     <button onclick="location.href='/pages/events.html'">See Upcoming Events</button>
 </div>
@@ -126,11 +110,7 @@
 <div id="donate" class="hidden-content">
     <h2>💚 Donate</h2>
     <p>
-        Every donation fuels our mission — from gear and tools to youth training and mentor support.  
-        Your contribution helps us expand our reach and restore more communities.
-    </p>
-    <p>
-        The <strong>Donate</strong> page explains how your support is used and how you can contribute.
+        Every donation fuels our mission — from gear and tools to youth training and mentor support.
     </p>
     <button onclick="location.href='/pages/donate.html'">Support the Mission</button>
 </div>
@@ -138,14 +118,10 @@
 <div id="contact" class="hidden-content">
     <h2>📬 Contact Us</h2>
     <p>
-        Whether you want to volunteer, partner with us, sponsor a youth, or simply learn more — we’re here to talk.  
-        The <strong>Contact</strong> page gives you direct access to our email, phone number, and social platforms.
+        Whether you want to volunteer, partner with us, sponsor a youth, or simply learn more — we’re here to talk.
     </p>
     <button onclick="location.href='/pages/contact.html'">Reach Out</button>
 </div>
-
-<!-- ONE INFO BOX -->
-<div id="info-box" class="content-box"></div>
 
 </body>
 </html>
