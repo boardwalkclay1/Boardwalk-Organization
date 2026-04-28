@@ -1,105 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Community Service | Boardwalk Clay Nonprofit</title>
+    <title>Community Service | Boardwalk Clay Organization</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Community cleanups, tree work, restoration projects, and ways to help with Boardwalk Clay Nonprofit.">
+    <meta name="description" content="Community cleanups, tree work, restoration projects, and ways to help with Boardwalk Clay Organization.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" href="../assets/favicon.ico">
+    <link rel="icon" href="/assets/favicon.ico">
 
     <!-- Social Preview -->
-    <meta property="og:title" content="Boardwalk Clay Nonprofit - Community Service">
+    <meta property="og:title" content="Boardwalk Clay Organization - Community Service">
     <meta property="og:description" content="Helping the community through cleanups, tree work, youth training, and restoration projects.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <!-- Correct paths -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+
+    <style>
+        body {
+            background-image: url('/images/bco-community.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hidden-content { display: none; }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="logo">
+        <img src="/assets/logo.png" class="logo-img">
+        Boardwalk Clay Organization
+    </div>
     <div class="burger">☰</div>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="community.html">Community Service</a>
-    <a href="sponsorships.html">Sponsorships</a>
-    <a href="youth.html">Youth Training</a>
-    <a href="mentors.html">Mentors</a>
-    <a href="events.html">Events</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="/pages/community.html">Community Service</a>
+    <a href="/pages/sponsorships.html">Sponsorships</a>
+    <a href="/pages/youth.html">Youth Training</a>
+    <a href="/pages/mentors.html">Mentors</a>
+    <a href="/pages/events.html">Events</a>
+    <a href="/pages/donate.html">Donate</a>
+    <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center;">Community Service & Impact</h1>
+<h1 style="text-align:center; margin-top:40px;">Community Service & Impact</h1>
 
-<div class="category" data-target="how-we-help">How We Help the Community</div>
-<div id="how-we-help" class="content-box">
-    <p>Boardwalk Clay Nonprofit focuses on neglected areas—overgrown lots, unsafe trees, trash‑filled corners, and forgotten spaces.</p>
+<!-- CATEGORY BUTTONS -->
+<div class="category" data-target="how-we-help">🌳 How We Help the Community</div>
+<div class="category" data-target="how-they-help">🤝 How You Can Help the Community</div>
+<div class="category" data-target="how-help-us-help">💚 How You Can Help Us Help the Community</div>
+<div class="category" data-target="sponsorship-overview">🌱 Sponsorships Overview</div>
+<div class="category" data-target="events">📅 Community Events & Service Days</div>
+
+<!-- HIDDEN CONTENT SECTIONS -->
+<div id="how-we-help" class="hidden-content">
+    <h2>🌳 How We Help the Community</h2>
+    <p>
+        Boardwalk Clay Organization focuses on the places most people overlook —  
+        the overgrown lots, unsafe trees, trash‑filled corners, and forgotten spaces that drag down entire neighborhoods.
+    </p>
+    <p>Our work includes:</p>
     <ul>
-        <li>Neighborhood cleanup days</li>
-        <li>Tree work and hazard removal</li>
-        <li>Light building and repair projects</li>
-        <li>Youth‑led service projects with mentor guidance</li>
-        <li>Environmental education woven into every action</li>
+        <li><strong>Neighborhood cleanup days</strong> that restore pride and safety</li>
+        <li><strong>Tree work and hazard removal</strong> led by trained youth and mentors</li>
+        <li><strong>Light building and repair projects</strong> for community spaces</li>
+        <li><strong>Youth‑led service missions</strong> that build leadership and confidence</li>
+        <li><strong>Environmental education</strong> woven into every project</li>
     </ul>
+    <p>
+        Every cleanup, every tree trimmed, every restored space is a step toward a stronger community.
+    </p>
 </div>
 
-<div class="category" data-target="how-they-help">How You Can Help the Community</div>
-<div id="how-they-help" class="content-box">
-    <p>You can step into the story with us:</p>
+<div id="how-they-help" class="hidden-content">
+    <h2>🤝 How You Can Help the Community</h2>
+    <p>
+        You can step into the story with us.  
+        Whether you have time, tools, or a location that needs care — you can make a real impact.
+    </p>
     <ul>
         <li>Volunteer at cleanup and tree work days</li>
-        <li>Offer tools, trucks, or locations that need care</li>
+        <li>Offer tools, trucks, or equipment</li>
         <li>Host a youth training or community event</li>
-        <li>Share our work with neighbors and local leaders</li>
+        <li>Connect us with neighborhoods that need help</li>
+        <li>Share our mission with local leaders and neighbors</li>
     </ul>
     <button data-popup="volunteer-popup">Sign Up to Volunteer</button>
 </div>
 
-<div class="category" data-target="how-help-us-help">How You Can Help Us Help the Community</div>
-<div id="how-help-us-help" class="content-box">
-    <p>Your support multiplies our impact:</p>
+<div id="how-help-us-help" class="hidden-content">
+    <h2>💚 How You Can Help Us Help the Community</h2>
+    <p>
+        Your support multiplies our impact.  
+        When you sponsor or donate, you’re fueling real work in real neighborhoods.
+    </p>
     <ul>
-        <li><strong>Sponsor mentors</strong> so they can train and lead youth in the field.</li>
-        <li><strong>Sponsor youth</strong> so cost is never a barrier to training.</li>
-        <li><strong>Donate</strong> to cover gear, safety equipment, fuel, and materials.</li>
+        <li><strong>Sponsor mentors</strong> so they can train and lead youth safely</li>
+        <li><strong>Sponsor youth</strong> so cost is never a barrier to training</li>
+        <li><strong>Donate</strong> to cover gear, safety equipment, fuel, and materials</li>
     </ul>
-    <a href="sponsorships.html"><button>Explore Sponsorships</button></a>
-    <a href="donate.html"><button>Go to Donate Page</button></a>
+    <button onclick="location.href='/pages/sponsorships.html'">Explore Sponsorships</button>
+    <button onclick="location.href='/pages/donate.html'">Go to Donate Page</button>
 </div>
 
-<div class="category" data-target="sponsorship-overview">Sponsorships Overview</div>
-<div id="sponsorship-overview" class="content-box">
-    <p>We offer two primary sponsorship channels:</p>
+<div id="sponsorship-overview" class="hidden-content">
+    <h2>🌱 Sponsorships Overview</h2>
+    <p>
+        We offer two primary sponsorship channels that directly support our mission:
+    </p>
     <ul>
-        <li><strong>Sponsor a Mentor</strong> – support the leaders who train and protect youth.</li>
-        <li><strong>Sponsor a Youth</strong> – fund training, gear, and safety for a young person.</li>
+        <li><strong>Sponsor a Mentor</strong> – support the leaders who train and protect youth</li>
+        <li><strong>Sponsor a Youth</strong> – fund training, gear, and safety for a young person</li>
     </ul>
-    <a href="sponsorships.html"><button>View Sponsorship Details</button></a>
+    <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Details</button>
 </div>
 
-<div class="category" data-target="events">Community Events & Service Days</div>
-<div id="events" class="content-box">
-    <p>We host recurring and special events focused on hands‑on service:</p>
+<div id="events" class="hidden-content">
+    <h2>📅 Community Events & Service Days</h2>
+    <p>
+        We host recurring and special events focused on hands‑on service and community restoration.
+    </p>
     <ul>
         <li>Neighborhood cleanup days</li>
         <li>Tree trimming and hazard removal</li>
         <li>Youth‑led service projects</li>
         <li>Skill‑building workshops in the field</li>
     </ul>
-    <a href="events.html"><button>View Full Events Page</button></a>
+    <button onclick="location.href='/pages/events.html'">View Full Events Page</button>
 </div>
 
 <!-- Volunteer Popup -->
 <div id="volunteer-popup" class="popup">
     <div class="popup-content">
         <h2>Volunteer with Boardwalk Clay</h2>
-        <p>Send us a quick email with your name, availability, and how you’d like to help.</p>
+        <p>
+            Send us a quick email with your name, availability, and how you’d like to help.  
+            We’ll reach out with upcoming opportunities.
+        </p>
         <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Volunteer%20for%20Community%20Service&body=Name:%0D%0AAvailability:%0D%0AHow%20I%20want%20to%20help:'">
             Open Email to Volunteer
         </button>
@@ -107,6 +150,9 @@
         <button class="close-popup">Close</button>
     </div>
 </div>
+
+<!-- INFO BOX -->
+<div id="info-box" class="content-box"></div>
 
 </body>
 </html>
