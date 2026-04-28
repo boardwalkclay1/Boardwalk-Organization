@@ -1,0 +1,82 @@
+{
+  "name": "Boardwalk Clay Organization",
+  "short_name": "BCO",
+  "description": "A nonprofit focused on youth training, community restoration, arborist education, and neighborhood service projects.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0f0b",
+  "theme_color": "#145214",
+
+  "icons": [
+    {
+      "src": "/images/bco-logo.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/bco-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/bco-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/bco-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/images/screenshots/home.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "label": "Home Page"
+    },
+    {
+      "src": "/images/screenshots/events.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "label": "Events Page"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Donate",
+      "short_name": "Donate",
+      "url": "/pages/donate.html",
+      "icons": [{ "src": "/images/icons/donate.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Events",
+      "short_name": "Events",
+      "url": "/pages/events.html",
+      "icons": [{ "src": "/images/icons/events.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "url": "/pages/contact.html",
+      "icons": [{ "src": "/images/icons/contact.png", "sizes": "96x96" }]
+    }
+  ],
+
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
