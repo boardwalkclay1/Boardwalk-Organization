@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <title>Community Service | Boardwalk Clay Organization</title>
     <meta charset="UTF-8">
     <meta name="description" content="Community cleanups, tree work, restoration projects, and ways to help with Boardwalk Clay Organization.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +26,15 @@
             background-attachment: fixed;
         }
         .hidden-content { display: none; }
+
+        /* Remove category text but keep button shape */
+        .category {
+            color: transparent !important;
+            text-shadow: none !important;
+        }
+        .category::after {
+            content: "" !important;
+        }
     </style>
 </head>
 <body>
@@ -51,12 +60,12 @@
 
 <h1 style="text-align:center; margin-top:40px;">Community Service & Impact</h1>
 
-<!-- CATEGORY BUTTONS -->
-<div class="category" data-target="how-we-help">🌳 How We Help the Community</div>
-<div class="category" data-target="how-they-help">🤝 How You Can Help the Community</div>
-<div class="category" data-target="how-help-us-help">💚 How You Can Help Us Help the Community</div>
-<div class="category" data-target="sponsorship-overview">🌱 Sponsorships Overview</div>
-<div class="category" data-target="events">📅 Community Events & Service Days</div>
+<!-- CATEGORY BUTTONS (titles removed) -->
+<div class="category" data-target="how-we-help"></div>
+<div class="category" data-target="how-they-help"></div>
+<div class="category" data-target="how-help-us-help"></div>
+<div class="category" data-target="sponsorship-overview"></div>
+<div class="category" data-target="events"></div>
 
 <!-- HIDDEN CONTENT SECTIONS -->
 <div id="how-we-help" class="hidden-content">
