@@ -37,13 +37,20 @@
             box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
         }
 
-        footer img {
-            width: 70px;
-            height: 70px;
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .footer-contact img {
+            width: 55px;
+            height: 55px;
             object-fit: contain;
-            border-radius: 10px;
-            box-shadow: 0 0 12px rgba(0,255,0,0.35);
-            margin-bottom: 12px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,255,0,0.35);
         }
 
         footer p {
@@ -188,10 +195,14 @@
 
 <!-- FOOTER -->
 <footer>
-    <img src="/images/bco-logo.png" alt="Boardwalk Clay Logo">
-    <p><strong>Boardwalk Clay Organization</strong></p>
-    <p>Email: <strong>boardwalkorganization@gmail.com</strong></p>
-    <p>Phone: <strong>(678) 683‑0570</strong></p>
+    <div class="footer-contact">
+        <img src="/images/bco-logo.png" alt="BCO Logo">
+        <div>
+            <p><strong>Boardwalk Clay Organization</strong></p>
+            <p>Email: <strong>boardwalkorganization@gmail.com</strong></p>
+            <p>Phone: <strong>(678) 683‑0570</strong></p>
+        </div>
+    </div>
     <p>Serving the Atlanta Metro Area & Surrounding Communities</p>
 </footer>
 
