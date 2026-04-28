@@ -26,6 +26,39 @@
             background-attachment: fixed;
         }
         .hidden-content { display: none; }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            background: linear-gradient(to right, #3b2a1a, #145214);
+            padding: 35px 20px;
+            text-align: center;
+            border-top: 3px solid #2fa02f;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .footer-contact img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,255,0,0.35);
+        }
+
+        footer p {
+            margin: 6px 0;
+            font-size: 18px;
+            color: #e8ffe8;
+            text-shadow: 0 0 6px #1f7a1f;
+        }
     </style>
 </head>
 
@@ -54,22 +87,22 @@
 
 <!-- CATEGORY BUTTONS -->
 <div class="category" data-target="email">📧 Email Us</div>
-<div id="email" class="content-box">
+<div id="email" class="content-box hidden-content">
     <p>For all inquiries:</p>
-    <p><strong>boardwalkclay1@gmail.com</strong></p>
-    <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Contact%20Request'">
+    <p><strong>boardwalkorganization@gmail.com</strong></p>
+    <button onclick="window.location.href='mailto:boardwalkorganization@gmail.com?subject=Contact%20Request'">
         Send Email
     </button>
 </div>
 
 <div class="category" data-target="phone">📞 Call Us</div>
-<div id="phone" class="content-box">
+<div id="phone" class="content-box hidden-content">
     <p>Phone:</p>
     <p><strong>(678) 683‑0570</strong></p>
 </div>
 
 <div class="category" data-target="social">🌐 Social Media</div>
-<div id="social" class="content-box">
+<div id="social" class="content-box hidden-content">
     <p>Follow us for updates, events, and community impact stories.</p>
     <ul>
         <li>Instagram</li>
@@ -79,9 +112,22 @@
 </div>
 
 <div class="category" data-target="visit">📍 Visit Us</div>
-<div id="visit" class="content-box">
+<div id="visit" class="content-box hidden-content">
     <p>We operate throughout the Atlanta metro area and surrounding communities.</p>
 </div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-contact">
+        <img src="/images/bco-logo.png" alt="BCO Logo">
+        <div>
+            <p><strong>Boardwalk Clay Organization</strong></p>
+            <p>Email: <strong>boardwalkorganization@gmail.com</strong></p>
+            <p>Phone: <strong>(678) 683‑0570</strong></p>
+        </div>
+    </div>
+    <p>Serving the Atlanta Metro Area & Surrounding Communities</p>
+</footer>
 
 </body>
 </html>
