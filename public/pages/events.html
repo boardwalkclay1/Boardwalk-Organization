@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Events | Boardwalk Clay Nonprofit</title>
+    <title>Events | Boardwalk Clay Organization</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Upcoming community cleanups, tree work days, youth workshops, and service events with Boardwalk Clay Nonprofit.">
+    <meta name="description" content="Upcoming community cleanups, tree work days, youth workshops, and service events with Boardwalk Clay Organization.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="../assets/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico">
 
-    <meta property="og:title" content="Boardwalk Clay Nonprofit - Events">
+    <!-- Social Preview -->
+    <meta property="og:title" content="Boardwalk Clay Organization - Events">
     <meta property="og:description" content="Join our community events, service days, and youth training workshops.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <!-- Correct paths -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+
+    <style>
+        body {
+            background-image: url('/images/bco-events.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hidden-content { display: none; }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">Boardwalk Clay Nonprofit</div>
+    <div class="logo">
+        <img src="/assets/logo.png" class="logo-img">
+        Boardwalk Clay Organization
+    </div>
     <div class="burger">☰</div>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="community.html">Community Service</a>
-    <a href="sponsorships.html">Sponsorships</a>
-    <a href="youth.html">Youth Training</a>
-    <a href="mentors.html">Mentors</a>
-    <a href="events.html">Events</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="/pages/community.html">Community Service</a>
+    <a href="/pages/sponsorships.html">Sponsorships</a>
+    <a href="/pages/youth.html">Youth Training</a>
+    <a href="/pages/mentors.html">Mentors</a>
+    <a href="/pages/events.html">Events</a>
+    <a href="/pages/donate.html">Donate</a>
+    <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center;">Upcoming Events</h1>
+<h1 style="text-align:center; margin-top:40px;">Upcoming Events</h1>
 
-<div class="category" data-target="cleanup-day">Neighborhood Cleanup Day</div>
-<div id="cleanup-day" class="content-box">
+<!-- CATEGORY BUTTONS -->
+<div class="category" data-target="cleanup-day">🧹 Neighborhood Cleanup Day</div>
+<div class="category" data-target="tree-work">🌳 Tree Work Volunteer Day</div>
+<div class="category" data-target="youth-workshop">🌱 Youth Training Workshop</div>
+
+<!-- HIDDEN CONTENT SECTIONS -->
+<div id="cleanup-day" class="hidden-content">
+    <h2>🧹 Neighborhood Cleanup Day</h2>
     <p><strong>Date:</strong> Every 2nd Saturday</p>
     <p><strong>Location:</strong> Rotating neighborhoods</p>
-    <p><strong>Description:</strong> Join us as we clear trash, trim overgrowth, and restore neglected areas.</p>
+    <p>
+        Join us as we clear trash, trim overgrowth, restore neglected areas, and bring life back to forgotten spaces.  
+        These cleanup days are youth‑led with mentor support, building leadership and teamwork.
+    </p>
     <button data-popup="cleanup-popup">Sign Up</button>
 </div>
 
-<div class="category" data-target="tree-work">Tree Work Volunteer Day</div>
-<div id="tree-work" class="content-box">
+<div id="tree-work" class="hidden-content">
+    <h2>🌳 Tree Work Volunteer Day</h2>
     <p><strong>Date:</strong> Monthly</p>
     <p><strong>Location:</strong> Announced weekly</p>
-    <p><strong>Description:</strong> Assist mentors and youth with safe tree trimming, hazard removal, and environmental care.</p>
+    <p>
+        Assist mentors and youth with safe tree trimming, hazard removal, rope work, and environmental care.  
+        No experience required — just willingness to learn and help.
+    </p>
     <button data-popup="tree-popup">Sign Up</button>
 </div>
 
-<div class="category" data-target="youth-workshop">Youth Training Workshop</div>
-<div id="youth-workshop" class="content-box">
+<div id="youth-workshop" class="hidden-content">
+    <h2>🌱 Youth Training Workshop</h2>
     <p><strong>Date:</strong> Twice per month</p>
     <p><strong>Location:</strong> Boardwalk Clay Training Grounds</p>
-    <p><strong>Description:</strong> Hands-on training in tree climbing, safety, teamwork, and leadership.</p>
+    <p>
+        Hands‑on training in tree climbing, safety, teamwork, leadership, and environmental stewardship.  
+        Youth learn real skills from real mentors in the field.
+    </p>
     <button data-popup="youth-popup">Sign Up</button>
 </div>
 
