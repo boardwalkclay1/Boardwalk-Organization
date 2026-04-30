@@ -16,6 +16,7 @@
             background: url('/images/bco-logo-back.jpg') center/cover no-repeat;
             animation: windFade 2.5s ease-out forwards;
             overflow-x: hidden;
+            position: relative;
         }
 
         @keyframes windFade {
@@ -27,10 +28,11 @@
         .leaf {
             position: fixed;
             top: -50px;
-            font-size: 28px;
-            opacity: 0.8;
+            font-size: 30px;
+            opacity: 0.85;
             animation: fall linear infinite;
-            z-index: 1;
+            z-index: 0;
+            pointer-events: none;
         }
 
         @keyframes fall {
@@ -41,58 +43,66 @@
         /* HERO SECTION */
         .hero {
             text-align: center;
-            padding: 80px 20px 40px;
-            max-width: 900px;
+            padding: 90px 20px 50px;
+            max-width: 1000px;
             margin: auto;
             color: #fff;
-            text-shadow: 0 0 12px #000;
+            text-shadow: 0 0 14px #000;
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
+            font-size: 58px;
+            margin-bottom: 12px;
         }
 
         .hero p {
-            font-size: 22px;
-            line-height: 1.6;
-            margin-top: 10px;
+            font-size: 26px;
+            line-height: 1.75;
+            margin-top: 12px;
         }
 
         /* CATEGORY BUTTONS */
         .category {
             background: rgba(0,0,0,0.55);
             backdrop-filter: blur(6px);
-            padding: 22px;
-            margin: 25px;
-            border-radius: 18px;
+            padding: 26px;
+            margin: 28px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 24px;
+            font-size: 28px;
             border: 1px solid #2fa02f;
-            box-shadow: 0 0 12px rgba(0,255,0,0.25);
+            box-shadow: 0 0 14px rgba(0,255,0,0.25);
             transition: 0.3s;
+            position: relative;
+            z-index: 2;
         }
 
         .category:hover {
-            transform: scale(1.03);
-            background: rgba(0,0,0,0.7);
+            transform: scale(1.05);
+            background: rgba(0,0,0,0.75);
         }
 
         /* DROPDOWN CONTENT */
         .hidden-content {
             display: none;
-            background: rgba(0,0,0,0.75);
-            backdrop-filter: blur(6px);
-            padding: 30px;
-            margin: 10px 25px 50px;
-            border-radius: 18px;
+            background: rgba(0,0,0,0.78);
+            backdrop-filter: blur(7px);
+            padding: 40px;
+            margin: 15px 28px 60px;
+            border-radius: 20px;
             border: 1px solid #2fa02f;
-            box-shadow: 0 0 20px rgba(0,255,0,0.25);
+            box-shadow: 0 0 22px rgba(0,255,0,0.3);
             animation: fadeIn 0.4s ease-out;
+            position: relative;
+            z-index: 2;
+            font-size: 24px;
+            line-height: 1.8;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -122,12 +132,15 @@
 <!-- HERO -->
 <section class="hero">
     <h1>Boardwalk Clay Organization</h1>
-    <h3 style="opacity:0.9; margin-top:0;">A Non-Profit for Youth, Community & Restoration</h3>
+    <h3 style="opacity:0.9; margin-top:0; font-size:28px;">A Non-Profit for Youth, Community & Restoration</h3>
 
     <p>
-        We empower youth through real arborist training, hands-on service, leadership development, and community restoration.  
-        Our mission is to rebuild forgotten spaces, uplift neighborhoods, and guide young people into purpose, discipline, and confidence.  
-        Every cleanup, every climb, every project is a step toward a stronger community — and a stronger generation.
+        We don’t just clean up neighborhoods — we breathe life back into them.  
+        We don’t just train youth — we awaken leaders.  
+        We don’t just remove hazards — we restore pride, dignity, and hope.  
+        Every project is a spark. Every cleanup is a lesson.  
+        Every young person who joins us discovers strength they never knew they had.  
+        This is more than service — this is transformation.
     </p>
 </section>
 
@@ -144,8 +157,14 @@
 <div id="mission" class="hidden-content">
     <h2>🌱 Our Mission</h2>
     <p>
-        We transform neglected spaces, train young leaders, and create opportunities for real change.  
-        Our mission is rooted in growth — of youth, neighborhoods, and community strength.
+        Our mission is rooted in transformation — of land, of youth, and of entire communities.  
+        We step into the forgotten places, the overgrown corners, the neglected blocks,  
+        and we bring life back into them.  
+        But the real transformation happens inside the young people who rise with every project.  
+        We give them purpose, responsibility, and the chance to see themselves as protectors,  
+        builders, and leaders.  
+        When a young person realizes they can change their environment,  
+        they begin to believe they can change their future too.
     </p>
     <button onclick="location.href='/pages/community.html'">Explore Our Mission</button>
 </div>
@@ -153,7 +172,12 @@
 <div id="youth" class="hidden-content">
     <h2>🌿 Youth Training</h2>
     <p>
-        Youth learn real arborist skills, teamwork, safety, environmental care, and leadership — all through hands-on service.
+        Our youth don’t sit in classrooms — they climb, they lift, they lead.  
+        They learn real arborist skills, safety, teamwork, discipline, and confidence  
+        through hands-on work that matters.  
+        Every rope tied, every branch lowered, every cleanup completed  
+        becomes a lesson in strength, responsibility, and purpose.  
+        We don’t just train workers — we build warriors, protectors, and future leaders.
     </p>
     <button onclick="location.href='/pages/youth.html'">Learn About Youth Training</button>
 </div>
@@ -161,7 +185,12 @@
 <div id="community" class="hidden-content">
     <h2>🌳 Community Service</h2>
     <p>
-        We restore abandoned lots, remove hazards, clean neighborhoods, and rebuild forgotten areas.
+        We go where others won’t — abandoned lots, unsafe trees, forgotten spaces.  
+        We restore them with sweat, skill, and heart.  
+        Our work brings neighborhoods together, builds trust,  
+        and shows youth the power of giving back.  
+        When a young person sees a block transformed because of their hands,  
+        they understand what real impact feels like.
     </p>
     <button onclick="location.href='/pages/community.html'">See Community Impact</button>
 </div>
@@ -169,7 +198,11 @@
 <div id="sponsorships" class="hidden-content">
     <h2>🤝 Sponsorships</h2>
     <p>
-        Sponsorships fund youth training, gear, safety equipment, transportation, and community restoration projects.
+        Sponsorships fuel everything we do — training, gear, safety equipment,  
+        transportation, and community restoration.  
+        When you sponsor, you’re not just funding a program —  
+        you’re investing in a young person’s future and a community’s rebirth.  
+        You become part of every cleanup, every transformation, every success story.
     </p>
     <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Options</button>
 </div>
@@ -177,7 +210,11 @@
 <div id="events" class="hidden-content">
     <h2>📅 Events</h2>
     <p>
-        Cleanup days, youth workshops, tree work events, and community gatherings — all open to volunteers.
+        Our events bring people together — youth, mentors, volunteers, families,  
+        all working side-by-side to make a difference.  
+        Cleanup days, workshops, tree work, community meals —  
+        every event is a chance to build something meaningful,  
+        to connect with others, and to leave a mark on the world.
     </p>
     <button onclick="location.href='/pages/events.html'">See Upcoming Events</button>
 </div>
@@ -185,7 +222,11 @@
 <div id="donate" class="hidden-content">
     <h2>💚 Donate</h2>
     <p>
-        Every donation fuels our mission — from tools to training to mentor support.
+        Your support keeps our mission alive.  
+        Every donation becomes tools, training, safety gear,  
+        and opportunities for youth to grow into leaders.  
+        You’re not just giving — you’re planting seeds  
+        that will grow into stronger communities and stronger futures.
     </p>
     <button onclick="location.href='/pages/donate.html'">Support the Mission</button>
 </div>
@@ -193,7 +234,10 @@
 <div id="contact" class="hidden-content">
     <h2>📬 Contact Us</h2>
     <p>
-        Want to volunteer, partner, sponsor, or learn more? Reach out anytime.
+        Whether you want to volunteer, partner, sponsor, or learn more,  
+        we’re here — ready to connect, ready to build, ready to grow.  
+        Reach out and become part of something real, something powerful,  
+        something that changes lives.
     </p>
     <button onclick="location.href='/pages/contact.html'">Reach Out</button>
 </div>
