@@ -1,301 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Admin Console | Boardwalk Clay Organization</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Boardwalk Clay — Admin Console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="/assets/favicon.ico">
-  <link rel="stylesheet" href="/css/admin.css">
-  <script src="/js/admin.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b10;
+            color: #f5f5f5;
+            font-family: system-ui, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .admin-sidebar {
+            width: 240px;
+            background: #111118;
+            border-right: 1px solid #1d1d27;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-btn {
+            padding: 14px 20px;
+            cursor: pointer;
+            color: #cfcfe8;
+            border-bottom: 1px solid #1d1d27;
+            transition: 0.2s;
+        }
+
+        .sidebar-btn:hover,
+        .sidebar-btn.active {
+            background: #1a1a25;
+            color: #fff;
+        }
+
+        .admin-panel {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .panel-view {
+            display: none;
+        }
+
+        .panel-view:not(.hidden) {
+            display: block;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+
+        .input {
+            background: #151520;
+            border: 1px solid #2a2a38;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            background: #3b3bf0;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #2a2ac0;
+        }
+    </style>
 </head>
-<body class="admin-body">
 
-<header class="admin-header">
-  <div class="admin-logo">
-    <img src="/assets/logo.png" class="logo-img">
-    <div class="admin-title">
-      <span class="admin-org">Boardwalk Clay Organization</span>
-      <span class="admin-sub">Admin Control Center</span>
-    </div>
-  </div>
-  <div class="admin-header-right">
-    <span class="admin-role-badge">Super Admin</span>
-    <button class="admin-header-btn">Log Out</button>
-  </div>
-</header>
+<body>
 
-<main class="admin-layout">
-  <aside class="admin-sidebar">
-    <div class="sidebar-section-label">Main</div>
-    <button data-panel="overview" class="sidebar-btn active">Overview</button>
-    <button data-panel="board-members" class="sidebar-btn">Board Members</button>
-    <button data-panel="tasks" class="sidebar-btn">Global Tasks</button>
-    <button data-panel="messages" class="sidebar-btn">Messages & Threads</button>
-
-    <div class="sidebar-section-label">Operations</div>
-    <button data-panel="docs" class="sidebar-btn">Documents & Policies</button>
-    <button data-panel="events" class="sidebar-btn">Events & Calendar</button>
-    <button data-panel="sponsors" class="sidebar-btn">Sponsors & Donors</button>
-
-    <div class="sidebar-section-label">System</div>
-    <button data-panel="logs" class="sidebar-btn">System Logs</button>
-    <button data-panel="settings" class="sidebar-btn">System Settings</button>
-  </aside>
-
-  <section id="admin-panel" class="admin-panel">
-    <!-- Default view: Overview -->
-    <div class="panel-view" id="panel-overview">
-      <h2>Overview</h2>
-      <div class="grid-3">
-        <div class="stat-card">
-          <h3>Active Board Members</h3>
-          <p class="stat-number">7</p>
-          <p class="stat-sub">Configured in Board Members</p>
-        </div>
-        <div class="stat-card">
-          <h3>Open Global Tasks</h3>
-          <p class="stat-number">12</p>
-          <p class="stat-sub">Across all programs</p>
-        </div>
-        <div class="stat-card">
-          <h3>Upcoming Events</h3>
-          <p class="stat-number">4</p>
-          <p class="stat-sub">Next 30 days</p>
-        </div>
-      </div>
-
-      <div class="panel-split">
-        <div class="panel-box">
-          <h3>Recent Activity</h3>
-          <ul class="activity-list">
-            <li><span class="tag tag-event">Event</span> Youth Cleanup Day created by Program Lead.</li>
-            <li><span class="tag tag-task">Task</span> Sponsor follow-up assigned to Treasurer.</li>
-            <li><span class="tag tag-doc">Doc</span> New legal policy uploaded.</li>
-          </ul>
-        </div>
-        <div class="panel-box">
-          <h3>Quick Actions</h3>
-          <div class="quick-actions">
-            <button class="qa-btn">Add Board Member</button>
-            <button class="qa-btn">Create Global Task</button>
-            <button class="qa-btn">Schedule Event</button>
-            <button class="qa-btn">Post Board Message</button>
-          </div>
-        </div>
-      </div>
+    <!-- SIDEBAR -->
+    <div class="admin-sidebar">
+        <div class="sidebar-btn" data-panel="dashboard">Dashboard</div>
+        <div class="sidebar-btn" data-panel="events">Events</div>
+        <div class="sidebar-btn" data-panel="tasks">Tasks</div>
+        <div class="sidebar-btn" data-panel="donations">Donations</div>
+        <div class="sidebar-btn" data-panel="sponsors">Sponsors</div>
+        <div class="sidebar-btn" data-panel="settings">Settings</div>
     </div>
 
-    <div class="panel-view hidden" id="panel-board-members">
-      <h2>Board Members</h2>
-      <div class="panel-box">
-        <div class="panel-box-header">
-          <h3>Member List</h3>
-          <button class="small-btn">Add Member</button>
+    <!-- MAIN PANEL -->
+    <div class="admin-panel">
+
+        <!-- DASHBOARD -->
+        <div id="panel-dashboard" class="panel-view">
+            <h2>Admin Dashboard</h2>
+            <p>Welcome to the Boardwalk Clay Admin Console.</p>
         </div>
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Role</th>
-              <th>Access</th>
-              <th>Status</th>
-              <th>Tools</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Jane Doe</td>
-              <td>Treasurer</td>
-              <td>Board Dashboard</td>
-              <td><span class="status-pill status-active">Active</span></td>
-              <td>Tasks, Sponsors, Docs</td>
-            </tr>
-            <tr>
-              <td>John Smith</td>
-              <td>Program Lead</td>
-              <td>Board Dashboard</td>
-              <td><span class="status-pill status-active">Active</span></td>
-              <td>Tasks, Youth Notes, Events</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+        <!-- EVENTS -->
+        <div id="panel-events" class="panel-view hidden">
+            <h2>Create Event</h2>
+            <input class="input" id="event-title" placeholder="Event Title">
+            <input class="input" id="event-date" placeholder="Event Date">
+            <button class="btn" onclick="AdminApp.createEvent()">Save Event</button>
+        </div>
+
+        <!-- TASKS -->
+        <div id="panel-tasks" class="panel-view hidden">
+            <h2>Create Task</h2>
+            <input class="input" id="task-title" placeholder="Task Title">
+            <input class="input" id="task-desc" placeholder="Task Description">
+            <button class="btn" onclick="AdminApp.createTask()">Save Task</button>
+        </div>
+
+        <!-- DONATIONS -->
+        <div id="panel-donations" class="panel-view hidden">
+            <h2>Donations</h2>
+            <p>Donation logs will appear here (JSON DB).</p>
+        </div>
+
+        <!-- SPONSORS -->
+        <div id="panel-sponsors" class="panel-view hidden">
+            <h2>Add Sponsor</h2>
+            <input class="input" id="sponsor-name" placeholder="Sponsor Name">
+            <input class="input" id="sponsor-email" placeholder="Sponsor Email">
+            <button class="btn" onclick="AdminApp.addSponsor()">Save Sponsor</button>
+        </div>
+
+        <!-- SETTINGS -->
+        <div id="panel-settings" class="panel-view hidden">
+            <h2>System Settings</h2>
+            <p>Future settings will go here.</p>
+        </div>
+
     </div>
 
-    <div class="panel-view hidden" id="panel-tasks">
-      <h2>Global Tasks</h2>
-      <div class="panel-box">
-        <div class="panel-box-header">
-          <h3>Task Board</h3>
-          <button class="small-btn">New Task</button>
-        </div>
-        <div class="task-columns">
-          <div class="task-column">
-            <h4>Not Started</h4>
-            <div class="task-card">
-              <h5>Plan next youth training cycle</h5>
-              <p>Owner: Program Lead</p>
-            </div>
-          </div>
-          <div class="task-column">
-            <h4>In Progress</h4>
-            <div class="task-card">
-              <h5>Follow up with sponsor leads</h5>
-              <p>Owner: Treasurer</p>
-            </div>
-          </div>
-          <div class="task-column">
-            <h4>Completed</h4>
-            <div class="task-card">
-              <h5>Update legal policy page</h5>
-              <p>Owner: Admin</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel-view hidden" id="panel-messages">
-      <h2>Messages & Threads</h2>
-      <div class="panel-split">
-        <div class="panel-box">
-          <h3>Channels</h3>
-          <ul class="channel-list">
-            <li class="channel active"># board-general</li>
-            <li class="channel"># youth-programs</li>
-            <li class="channel"># sponsors-finance</li>
-            <li class="channel"># events-logistics</li>
-          </ul>
-        </div>
-        <div class="panel-box">
-          <h3># board-general</h3>
-          <div class="message-thread">
-            <div class="message">
-              <span class="message-author">You</span>
-              <span class="message-text">Let’s finalize the next board meeting date.</span>
-            </div>
-            <div class="message">
-              <span class="message-author">Treasurer</span>
-              <span class="message-text">I’m available next Thursday evening.</span>
-            </div>
-          </div>
-          <div class="message-input-row">
-            <input type="text" placeholder="Type a message...">
-            <button class="small-btn">Send</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel-view hidden" id="panel-docs">
-      <h2>Documents & Policies</h2>
-      <div class="panel-box">
-        <div class="panel-box-header">
-          <h3>Key Documents</h3>
-          <button class="small-btn">Add Document</button>
-        </div>
-        <ul class="doc-list">
-          <li><span class="tag tag-doc">Legal</span> Nonprofit Legal Information (linked to /pages/legal.html)</li>
-          <li><span class="tag tag-doc">Terms</span> Terms & Conditions (linked to /pages/terms.html)</li>
-          <li><span class="tag tag-doc">Privacy</span> Privacy Policy (linked to /pages/privacy.html)</li>
-          <li><span class="tag tag-doc">Program</span> Youth Training Handbook</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel-view hidden" id="panel-events">
-      <h2>Events & Calendar</h2>
-      <div class="panel-box">
-        <div class="panel-box-header">
-          <h3>Upcoming Events</h3>
-          <button class="small-btn">Create Event</button>
-        </div>
-        <ul class="event-list">
-          <li><strong>Youth Cleanup Day</strong> – Saturday, 10 AM – Lead: Program Lead</li>
-          <li><strong>Board Strategy Meeting</strong> – Next Thursday, 7 PM – Lead: Admin</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel-view hidden" id="panel-sponsors">
-      <h2>Sponsors & Donors</h2>
-      <div class="panel-box">
-        <div class="panel-box-header">
-          <h3>Recent Sponsors</h3>
-          <button class="small-btn">Add Sponsor</button>
-        </div>
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Last Gift</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>GreenTree Services</td>
-              <td>Corporate</td>
-              <td>$2,500</td>
-              <td>Equipment sponsor</td>
-            </tr>
-            <tr>
-              <td>Mary Johnson</td>
-              <td>Individual</td>
-              <td>$150</td>
-              <td>Youth training supporter</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="panel-view hidden" id="panel-logs">
-      <h2>System Logs</h2>
-      <div class="panel-box">
-        <h3>Recent Activity Log</h3>
-        <ul class="log-list">
-          <li>[10:21] Admin logged in.</li>
-          <li>[10:25] Board member “Jane Doe” updated sponsor notes.</li>
-          <li>[10:30] New event created: Youth Cleanup Day.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel-view hidden" id="panel-settings">
-      <h2>System Settings</h2>
-      <div class="panel-box">
-        <h3>Organization Settings</h3>
-        <div class="settings-grid">
-          <div class="settings-item">
-            <label>Organization Name</label>
-            <input type="text" value="Boardwalk Clay Organization">
-          </div>
-          <div class="settings-item">
-            <label>Primary Contact Email</label>
-            <input type="email" value="boardwalkclay1@gmail.com">
-          </div>
-          <div class="settings-item">
-            <label>Legal Page URL</label>
-            <input type="text" value="/pages/legal.html">
-          </div>
-          <div class="settings-item">
-            <label>Terms Page URL</label>
-            <input type="text" value="/pages/terms.html">
-          </div>
-          <div class="settings-item">
-            <label>Privacy Page URL</label>
-            <input type="text" value="/pages/privacy.html">
-          </div>
-        </div>
-        <button class="qa-btn">Save Settings</button>
-      </div>
-    </div>
-
-  </section>
-</main>
-
+    <script src="admin.js"></script>
 </body>
 </html>
