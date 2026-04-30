@@ -1,33 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ===============================
+    // BURGER MENU
+    // ===============================
     const burger = document.querySelector(".burger");
     const nav = document.querySelector("nav");
-    const infoBox = document.getElementById("info-box");
 
-    // Ensure info box is hidden on load
-    infoBox.style.display = "none";
-
-    // BURGER MENU
     if (burger) {
         burger.addEventListener("click", () => {
             nav.style.display = nav.style.display === "flex" ? "none" : "flex";
         });
     }
 
-    // CATEGORY CLICK → LOAD CONTENT INTO ONE BOX
-    document.querySelectorAll(".category").forEach(cat => {
-        cat.addEventListener("click", () => {
-            const targetId = cat.dataset.target;
-            const targetContent = document.getElementById(targetId);
+    // ===============================
+    // MULTIPLE DROPDOWNS (INDEX PAGE)
+    // ===============================
+    document.querySelectorAll(".category").forEach(button => {
+        button.addEventListener("click", () => {
 
-            if (targetContent) {
-                infoBox.innerHTML = targetContent.innerHTML;
-                infoBox.style.display = "block";
-                infoBox.scrollIntoView({ behavior: "smooth" });
+            const targetId = button.getAttribute("data-target");
+            const box = document.getElementById(targetId);
+
+            // Close all other dropdowns
+            document.querySelectorAll(".hidden-content").forEach(section => {
+                if (section !== box) {
+                    section.style.display = "none";
+                }
+            });
+
+            // Toggle selected dropdown
+            box.style.display = box.style.display === "block" ? "none" : "block";
+
+            // Smooth scroll
+            if (box.style.display === "block") {
+                setTimeout(() => {
+                    box.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 150);
             }
         });
     });
 
-    // POPUPS
+    // ===============================
+    // POPUPS (OTHER PAGES)
+    // ===============================
     document.querySelectorAll("[data-popup]").forEach(btn => {
         btn.addEventListener("click", () => {
             const popup = document.getElementById(btn.dataset.popup);
@@ -40,4 +55,5 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.closest(".popup").style.display = "none";
         });
     });
+
 });
