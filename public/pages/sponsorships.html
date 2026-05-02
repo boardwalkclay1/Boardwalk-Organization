@@ -1,176 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sponsorships | Boardwalk Clay Organization</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Sponsor mentors and youth to support training, safety, and community impact with Boardwalk Clay Organization.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Sponsorships | Boardwalk Clay Organization</title>
+  <meta name="description" content="Sponsor youth training, mentors, and community projects through Boardwalk Clay Organization.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon (proper size) -->
-    <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
+  <meta property="og:title" content="Boardwalk Clay Organization - Sponsorships">
+  <meta property="og:description" content="Support youth, mentors, and community restoration through structured sponsorship levels.">
+  <meta property="og:type" content="website">
 
-    <!-- Social Preview -->
-    <meta property="og:title" content="Boardwalk Clay Organization - Sponsorships">
-    <meta property="og:description" content="Directly support mentors and youth in hands-on community work and training.">
-    <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 
-    <!-- Correct paths -->
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js" defer></script>
-
-    <style>
-        body {
-            background-image: url('/images/bco-sponsor.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .hidden-content { display: none; }
-
-        /* FIXED LOGO SIZING */
-        .logo-img {
-            width: 55px;
-            height: 55px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.35);
-        }
-
-        header .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-    </style>
+  <style>
+    body {
+      background-image: url('/images/bco-sponsor.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2.4rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+    .level-card {
+      background: rgba(0,0,0,0.55);
+      padding: 18px 22px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="/images/bco-logo.png" class="logo-img">
-        Boardwalk Clay Organization
-    </div>
-    <div class="burger">☰</div>
+  <div class="logo">
+    <img src="/images/bco-logo.png" class="logo-img" alt="Boardwalk Clay Logo">
+    Boardwalk Clay Organization
+  </div>
+  <div class="burger" id="burger-btn">☰</div>
 </header>
 
+<div id="mobile-menu" class="mobile-menu">
+  <a href="/index.html">Home</a>
+  <a href="/pages/community.html">Community Service</a>
+  <a href="/pages/sponsorships.html">Sponsorships</a>
+  <a href="/pages/youth.html">Youth Training</a>
+  <a href="/pages/mentors.html">Mentors</a>
+  <a href="/pages/events.html">Events</a>
+  <a href="/pages/donate.html">Donate</a>
+  <a href="/pages/contact.html">Contact</a>
+</div>
+
 <nav>
-    <a href="/index.html">Home</a>
-    <a href="/pages/community.html">Community Service</a>
-    <a href="/pages/sponsorships.html">Sponsorships</a>
-    <a href="/pages/youth.html">Youth Training</a>
-    <a href="/pages/mentors.html">Mentors</a>
-    <a href="/pages/events.html">Events</a>
-    <a href="/pages/donate.html">Donate</a>
-    <a href="/pages/contact.html">Contact</a>
+  <a href="/index.html">Home</a>
+  <a href="/pages/community.html">Community Service</a>
+  <a href="/pages/sponsorships.html">Sponsorships</a>
+  <a href="/pages/youth.html">Youth Training</a>
+  <a href="/pages/mentors.html">Mentors</a>
+  <a href="/pages/events.html">Events</a>
+  <a href="/pages/donate.html">Donate</a>
+  <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center; margin-top:40px;">Sponsorships</h1>
+<h1>Sponsorships</h1>
 
-<!-- CATEGORY BUTTONS -->
-<div class="category" data-target="sponsor-mentor">🌲 Sponsor a Mentor</div>
-<div class="category" data-target="sponsor-youth">🌱 Sponsor a Youth</div>
-<div class="category" data-target="sponsor-levels">🌿 Sponsorship Levels</div>
-<div class="category" data-target="why-sponsor">💚 Why Sponsorship Matters</div>
-
-<!-- HIDDEN CONTENT SECTIONS -->
-<div id="sponsor-mentor" class="hidden-content">
-    <h2>🌲 Sponsor a Mentor</h2>
-    <p>
-        Mentors are the backbone of our organization.  
-        They climb, teach, protect, and guide youth through real-world service projects — from tree work to community restoration.
-    </p>
-    <p>Your sponsorship helps provide:</p>
-    <ul>
-        <li>Professional safety gear and climbing equipment</li>
-        <li>Transportation to community service sites</li>
-        <li>Time spent training and supervising youth</li>
-        <li>Ongoing certifications and skill development</li>
-    </ul>
-    <p>
-        When you sponsor a mentor, you’re investing in leadership, safety, and the future of every youth they train.
-    </p>
-    <button data-popup="mentor-sponsor-popup">Sponsor a Mentor via Email</button>
+<div class="category" data-target="sponsor-purpose">Why Sponsorship Matters</div>
+<div id="sponsor-purpose" class="content-box">
+  <p>
+    Sponsorships are the engine behind Boardwalk Clay’s work.
+    They support youth training, mentor time, safety gear, transportation, and community projects.
+  </p>
+  <p>
+    When you sponsor, you’re not just giving money — you’re giving <strong>skills, safety, and opportunity</strong>.
+  </p>
 </div>
 
-<div id="sponsor-youth" class="hidden-content">
-    <h2>🌱 Sponsor a Youth</h2>
-    <p>
-        Many young people want to learn, serve, and grow — but cost can be a barrier.  
-        Your sponsorship removes that barrier and opens the door to real opportunity.
-    </p>
-    <p>Your support can provide:</p>
-    <ul>
-        <li>Training program enrollment</li>
-        <li>Helmets, harnesses, gloves, and safety gear</li>
-        <li>Ropes, tools, and climbing equipment</li>
-        <li>Transportation and meals on service days</li>
-    </ul>
-    <p>
-        Sponsoring a youth means giving them confidence, purpose, and a path to leadership.
-    </p>
-    <button data-popup="youth-sponsor-popup">Sponsor a Youth via Email</button>
+<div class="category" data-target="sponsor-supports">What Sponsorship Supports</div>
+<div id="sponsor-supports" class="content-box">
+  <h3>Youth Sponsorship</h3>
+  <p>Covers helmets, gloves, ropes, harnesses, training days, transportation, and meals on long service days.</p>
+
+  <h3>Mentor Sponsorship</h3>
+  <p>Covers mentor time, safety oversight, training materials, certifications, and fuel/equipment maintenance.</p>
+
+  <h3>Community Project Sponsorship</h3>
+  <p>Covers cleanup supplies, dump fees, tools, hazard removal, and restoration materials.</p>
 </div>
 
-<div id="sponsor-levels" class="hidden-content">
-    <h2>🌿 Sponsorship Levels</h2>
-    <ul>
-        <li><strong>Seed Level</strong> – Helps with basic gear and supplies.</li>
-        <li><strong>Sapling Level</strong> – Supports a youth or mentor for a specific project.</li>
-        <li><strong>Canopy Level</strong> – Funds a full training cycle or multiple service days.</li>
-        <li><strong>Legacy Level</strong> – Provides ongoing support across seasons and programs.</li>
-    </ul>
-    <p>
-        Every level makes a real impact — choose the one that fits your heart and your mission.
-    </p>
-    <button onclick="location.href='/pages/donate.html'">Go to Donate Page</button>
+<div class="category" data-target="sponsor-levels">Sponsorship Levels</div>
+<div id="sponsor-levels" class="content-box">
+  <div class="level-card">
+    <h3>Seed Sponsor — $25</h3>
+    <p>Helps provide basic youth gear and safety items.</p>
+  </div>
+  <div class="level-card">
+    <h3>Sapling Sponsor — $50</h3>
+    <p>Supports one youth training day with mentors.</p>
+  </div>
+  <div class="level-card">
+    <h3>Tree Sponsor — $100</h3>
+    <p>Supports a full youth training week, including gear and transportation.</p>
+  </div>
+  <div class="level-card">
+    <h3>Forest Sponsor — $250</h3>
+    <p>Supports a community cleanup or restoration project.</p>
+  </div>
+  <div class="level-card">
+    <h3>Legacy Sponsor — $500+</h3>
+    <p>Supports certifications, advanced gear, and long‑term youth development.</p>
+  </div>
 </div>
 
-<div id="why-sponsor" class="hidden-content">
-    <h2>💚 Why Sponsorship Matters</h2>
-    <p>
-        Sponsorship is more than financial support — it’s partnership.  
-        You become part of every cleanup, every restored space, every youth trained, and every life changed.
-    </p>
-    <p>You help:</p>
-    <ul>
-        <li>Turn neglected spaces into safe, beautiful areas</li>
-        <li>Equip youth with real skills and confidence</li>
-        <li>Support mentors who model leadership and care</li>
-        <li>Build a culture of service, responsibility, and community pride</li>
-    </ul>
+<div class="category" data-target="sponsor-benefits">What Sponsors Receive</div>
+<div id="sponsor-benefits" class="content-box">
+  <ul>
+    <li>Recognition on the website (optional)</li>
+    <li>A sponsor badge or digital certificate</li>
+    <li>Updates on youth progress and projects</li>
+    <li>Invitations to community events</li>
+    <li>A tax‑deductible receipt</li>
+  </ul>
 </div>
 
-<!-- Mentor Sponsor Popup -->
-<div id="mentor-sponsor-popup" class="popup">
-    <div class="popup-content">
-        <h2>Sponsor a Mentor</h2>
-        <p>Send us an email with “Sponsor a Mentor” in the subject line and we’ll match you with a mentor.</p>
-        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Sponsor%20a%20Mentor&body=Name:%0D%0AContribution%20Amount:%0D%0AOne-time%20or%20Recurring:%0D%0AAny%20preferences%20for%20mentor%20focus:'">
-            Open Email to Sponsor a Mentor
-        </button>
-        <br><br>
-        <button class="close-popup">Close</button>
-    </div>
+<div class="category" data-target="sponsor-actions">How to Sponsor</div>
+<div id="sponsor-actions" class="content-box">
+  <p>You can sponsor in two ways:</p>
+  <ol>
+    <li>Choose a sponsorship level and give through our Donate page.</li>
+    <li>Contact us directly to set up a custom sponsorship.</li>
+  </ol>
+  <button onclick="location.href='/pages/donate.html'">Give a Sponsorship</button>
+  <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Sponsorship%20Inquiry&body=Name:%0D%0AOrganization%20(optional):%0D%0ASponsorship%20Level%20or%20Idea:%0D%0AContact%20Phone:'">
+    Email About Sponsorship
+  </button>
 </div>
 
-<!-- Youth Sponsor Popup -->
-<div id="youth-sponsor-popup" class="popup">
-    <div class="popup-content">
-        <h2>Sponsor a Youth</h2>
-        <p>Send us an email with “Sponsor a Youth” in the subject line and we’ll connect your support to a young trainee.</p>
-        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Sponsor%20a%20Youth&body=Name:%0D%0AContribution%20Amount:%0D%0AOne-time%20or%20Recurring:%0D%0AAny%20preferences%20for%20youth%20focus:'">
-            Open Email to Sponsor a Youth
-        </button>
-        <br><br>
-        <button class="close-popup">Close</button>
-    </div>
+<div class="category" data-target="sponsor-for-section">For Youth, Parents, Mentors & Sponsors</div>
+<div id="sponsor-for-section" class="content-box">
+  <h3>For Youth</h3>
+  <p>Sponsorships keep the program free or low‑cost and fully equipped.</p>
+
+  <h3>For Parents</h3>
+  <p>Sponsorships ensure safety gear, supervision, and structured training.</p>
+
+  <h3>For Mentors</h3>
+  <p>Sponsorships support the time and tools needed to teach well.</p>
+
+  <h3>For Sponsors</h3>
+  <p>Sponsorships are a direct way to invest in youth, community, and real change.</p>
 </div>
 
-<!-- INFO BOX -->
-<div id="info-box" class="content-box"></div>
+<script>
+  const burger = document.getElementById("burger-btn");
+  const menu = document.getElementById("mobile-menu");
+  burger.addEventListener("click", () => menu.classList.toggle("open"));
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => menu.classList.remove("open"));
+  });
+
+  document.querySelectorAll('.category').forEach(cat => {
+    cat.addEventListener('click', () => {
+      const target = document.getElementById(cat.dataset.target);
+      if (!target) return;
+      target.style.display = target.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
 
 </body>
 </html>
