@@ -3,22 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Mentors | Boardwalk Clay Nonprofit</title>
-  <meta name="description" content="Meet the mentors who train youth in tree work, safety, and community service at Boardwalk Clay Nonprofit.">
+  <meta name="description" content="Meet the professional arborists and community mentors guiding youth through hands-on training, safety, and leadership at Boardwalk Clay Nonprofit.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Correct favicon path -->
   <link rel="icon" href="../assets/favicon.ico">
-
-  <!-- Social preview -->
-  <meta property="og:title" content="Boardwalk Clay Nonprofit - Mentors">
-  <meta property="og:description" content="Tree climbing mentors and trainers leading youth in hands-on community work.">
-  <meta property="og:type" content="website">
-
-  <!-- FIXED CSS PATH -->
   <link rel="stylesheet" href="../css/style.css">
-
-  <!-- FIXED JS PATH -->
-  <script src="../js/main.js" defer></script>
 
   <style>
     body {
@@ -57,32 +46,42 @@
     h1 {
       text-align: center;
       margin: 30px 0 10px;
-      font-size: 2em;
+      font-size: 2.4em;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
     .category {
-      background: rgba(0,0,0,0.6);
-      padding: 12px 20px;
+      background: rgba(0,0,0,0.65);
+      padding: 14px 20px;
       margin: 20px auto 0;
-      max-width: 800px;
+      max-width: 900px;
       border-radius: 10px;
       cursor: pointer;
       font-weight: 600;
+      font-size: 1.1em;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .category:hover {
+      background: rgba(0,0,0,0.75);
     }
     .content-box {
-      background: rgba(0,0,0,0.5);
-      padding: 16px 20px;
+      background: rgba(0,0,0,0.55);
+      padding: 18px 22px;
       margin: 0 auto 20px;
-      max-width: 800px;
+      max-width: 900px;
       border-radius: 10px;
       display: none;
-    }
-    .content-box ul {
-      margin: 10px 0 0 20px;
+      line-height: 1.6em;
     }
     .content-box h3 {
       margin-top: 0;
       color: #aef;
+    }
+    .mentor-card {
+      background: rgba(0,0,0,0.45);
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
     }
     button {
       background: #00c853;
@@ -140,46 +139,112 @@
 
 <h1>Our Mentors</h1>
 
+<!-- TEAM STORY -->
+<div class="category" data-target="team-story">Our Story: A Brotherhood of Tree Professionals</div>
+<div id="team-story" class="content-box">
+  <p>
+    Our mentorship team is built from a tight-knit group of professional arborists, climbers, and community workers who have known each other for over a decade. 
+    We’ve climbed together, worked storms together, cleaned neighborhoods together, and built careers side-by-side.
+  </p>
+  <p>
+    One day we realized something:  
+    <strong>we’ve been blessed with skills that can change lives.</strong>
+  </p>
+  <p>
+    So we made a decision —  
+    <strong>to teach the community, especially the youth, the art and discipline of being an arborist.</strong>
+  </p>
+  <p>
+    This program is our way of giving back, passing down real skills, and building the next generation of leaders.
+  </p>
+</div>
+
+<!-- WHAT MENTORS DO -->
 <div class="category" data-target="mentor-role">What Mentors Do</div>
 <div id="mentor-role" class="content-box">
-  <p>Mentors are more than instructors—they are protectors, guides, and examples.</p>
+  <p>Our mentors are more than instructors — they are protectors, guides, and examples.</p>
   <ul>
-    <li>Teach safe tree climbing and tool handling</li>
-    <li>Lead youth in real service projects</li>
-    <li>Model responsibility, discipline, and care</li>
-    <li>Help youth see their value and potential</li>
+    <li>Teach safe tree climbing and rope systems</li>
+    <li>Train youth in tool handling and ground operations</li>
+    <li>Lead real community service projects</li>
+    <li>Model discipline, teamwork, and leadership</li>
+    <li>Help youth build confidence and purpose</li>
   </ul>
 </div>
 
-<div class="category" data-target="mentor-profiles">Mentor Profiles</div>
-<div id="mentor-profiles" class="content-box">
-  <p>Below are example mentor profiles. You can expand this later with real data.</p>
+<!-- MENTORSHIP PLAN -->
+<div class="category" data-target="mentor-plan">How Mentorship Works</div>
+<div id="mentor-plan" class="content-box">
+  <h3>The Boardwalk Clay Mentorship Path</h3>
+  <p>Our mentorship program is structured, safe, and built for real growth.</p>
 
-  <div class="content-box" style="display:block;">
-    <h3>Mentor: Alex “Canopy” Rivers</h3>
-    <p>Specialty: Advanced tree climbing, rigging, and safety systems.</p>
-    <p>Focus: Teaching youth how to move safely and confidently in the canopy.</p>
-  </div>
+  <h4>1. Orientation & Safety</h4>
+  <p>Youth learn the basics: PPE, knots, communication, ground safety, and respect for tools.</p>
 
-  <div class="content-box" style="display:block;">
-    <h3>Mentor: Jordan “Roots” Hayes</h3>
-    <p>Specialty: Ground operations, cleanup logistics, and environmental education.</p>
-    <p>Focus: Helping youth understand the impact of their work on the community.</p>
-  </div>
+  <h4>2. Ground Operations</h4>
+  <p>Before climbing, youth master raking, hauling, rope management, and teamwork.</p>
 
-  <div class="content-box" style="display:block;">
-    <h3>Mentor: Taylor “Bridge” Cole</h3>
-    <p>Specialty: Youth development, communication, and leadership training.</p>
-    <p>Focus: Building confidence, teamwork, and long‑term growth.</p>
-  </div>
+  <h4>3. Beginner Climbing</h4>
+  <p>Under full supervision, youth learn basic ascent, positioning, and controlled movement.</p>
+
+  <h4>4. Intermediate Skills</h4>
+  <p>Rigging, limb control, saw safety (non-powered), and environmental awareness.</p>
+
+  <h4>5. Leadership & Service</h4>
+  <p>Youth lead small teams during community cleanups and service projects.</p>
+
+  <h4>6. Certification Path (Optional)</h4>
+  <p>We help youth pursue real arborist certifications and job opportunities.</p>
 </div>
 
-<div class="category" data-target="become-mentor">Become a Mentor</div>
+<!-- MENTOR PROFILES -->
+<div class="category" data-target="mentor-profiles">Meet Our Mentors</div>
+<div id="mentor-profiles" class="content-box">
+
+  <div class="mentor-card">
+    <h3>Alex “Canopy” Rivers</h3>
+    <p><strong>Specialty:</strong> Advanced climbing, rigging, canopy movement</p>
+    <p><strong>Focus:</strong> Teaching youth how to move safely and confidently in the canopy.</p>
+  </div>
+
+  <div class="mentor-card">
+    <h3>Jordan “Roots” Hayes</h3>
+    <p><strong>Specialty:</strong> Ground operations, cleanup logistics, environmental care</p>
+    <p><strong>Focus:</strong> Helping youth understand the impact of their work on the community.</p>
+  </div>
+
+  <div class="mentor-card">
+    <h3>Taylor “Bridge” Cole</h3>
+    <p><strong>Specialty:</strong> Youth development, communication, leadership</p>
+    <p><strong>Focus:</strong> Building confidence, teamwork, and long‑term growth.</p>
+  </div>
+
+</div>
+
+<!-- APPLY -->
+<div class="category" data-target="become-mentor">Apply to Be a Mentor</div>
 <div id="become-mentor" class="content-box">
   <p>If you have experience in tree work, construction, environmental care, or youth leadership, you may be a fit.</p>
-  <button data-popup="mentor-join-popup">Apply to Be a Mentor</button>
+  <button data-popup="mentor-join-popup">Apply Now</button>
 </div>
 
+<!-- FOR SECTION -->
+<div class="category" data-target="for-section">For Youth, Parents, Mentors & Sponsors</div>
+<div id="for-section" class="content-box">
+  <h3>For Youth</h3>
+  <p>Learn real skills, build confidence, and join a team that supports your growth.</p>
+
+  <h3>For Parents</h3>
+  <p>Our program is structured, supervised, and focused on safety and discipline.</p>
+
+  <h3>For Mentors</h3>
+  <p>Share your skills, give back, and help shape the next generation.</p>
+
+  <h3>For Sponsors</h3>
+  <p>Your support provides gear, safety equipment, transportation, and training time.</p>
+</div>
+
+<!-- SPONSOR -->
 <div class="category" data-target="sponsor-mentors">Sponsor Mentors</div>
 <div id="sponsor-mentors" class="content-box">
   <p>You can directly support the mentors who make this work possible.</p>
@@ -187,12 +252,12 @@
   <a href="donate.html"><button>Donate to Mentor Support</button></a>
 </div>
 
-<!-- Mentor Join Popup -->
+<!-- POPUP -->
 <div id="mentor-join-popup" class="popup">
   <div class="popup-content">
     <h2>Apply to Be a Mentor</h2>
     <p>Send us an email with your background and why you want to mentor youth.</p>
-    <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Mentor%20Application&body=Name:%0D%0AExperience%20in%20tree%20work/youth%20work:%0D%0AWhy%20you%20want%20to%20mentor:%0D%0AAvailability:'">
+    <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Mentor%20Application&body=Name:%0D%0AExperience:%0D%0AWhy%20I%20want%20to%20mentor:%0D%0AAvailability:'">
       Open Email to Apply
     </button>
     <br><br>
