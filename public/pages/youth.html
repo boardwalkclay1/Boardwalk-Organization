@@ -1,193 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Youth Training | Boardwalk Clay Organization</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Youth training in professional tree climbing, safety, environmental care, business skills, and community service with Boardwalk Clay Organization.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Training | Boardwalk Clay Organization</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Youth training in professional tree climbing, safety, environmental care, business skills, and community service with Boardwalk Clay Organization.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon (properly sized) -->
-    <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
+  <meta property="og:title" content="Boardwalk Clay Organization - Youth Training">
+  <meta property="og:description" content="Hands-on youth training in tree climbing, safety, business skills, and community restoration.">
+  <meta property="og:type" content="website">
 
-    <!-- Social Preview -->
-    <meta property="og:title" content="Boardwalk Clay Organization - Youth Training">
-    <meta property="og:description" content="Hands-on youth training in tree climbing, safety, business skills, and community restoration.">
-    <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 
-    <!-- Correct paths -->
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js" defer></script>
-
-    <style>
-        body {
-            background-image: url('/images/bco-youth.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .hidden-content { display: none; }
-
-        /* FIXED LOGO SIZING */
-        .logo-img {
-            width: 55px;       /* perfect size */
-            height: 55px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.35);
-        }
-
-        /* Optional: keep header clean */
-        header .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-    </style>
+  <style>
+    body {
+      background-image: url('/images/bco-youth.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2.4rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="/images/bco-logo.png" class="logo-img">
-        Boardwalk Clay Organization
-    </div>
-    <div class="burger">☰</div>
+  <div class="logo">
+    <img src="/images/bco-logo.png" class="logo-img" alt="Boardwalk Clay Logo">
+    Boardwalk Clay Organization
+  </div>
+  <div class="burger" id="burger-btn">☰</div>
 </header>
 
+<div id="mobile-menu" class="mobile-menu">
+  <a href="/index.html">Home</a>
+  <a href="/pages/community.html">Community Service</a>
+  <a href="/pages/sponsorships.html">Sponsorships</a>
+  <a href="/pages/youth.html">Youth Training</a>
+  <a href="/pages/mentors.html">Mentors</a>
+  <a href="/pages/events.html">Events</a>
+  <a href="/pages/donate.html">Donate</a>
+  <a href="/pages/contact.html">Contact</a>
+</div>
+
 <nav>
-    <a href="/index.html">Home</a>
-    <a href="/pages/community.html">Community Service</a>
-    <a href="/pages/sponsorships.html">Sponsorships</a>
-    <a href="/pages/youth.html">Youth Training</a>
-    <a href="/pages/mentors.html">Mentors</a>
-    <a href="/pages/events.html">Events</a>
-    <a href="/pages/donate.html">Donate</a>
-    <a href="/pages/contact.html">Contact</a>
+  <a href="/index.html">Home</a>
+  <a href="/pages/community.html">Community Service</a>
+  <a href="/pages/sponsorships.html">Sponsorships</a>
+  <a href="/pages/youth.html">Youth Training</a>
+  <a href="/pages/mentors.html">Mentors</a>
+  <a href="/pages/events.html">Events</a>
+  <a href="/pages/donate.html">Donate</a>
+  <a href="/pages/contact.html">Contact</a>
 </nav>
 
-<h1 style="text-align:center; margin-top:40px;">Youth Training Programs</h1>
+<h1>Youth Training Programs</h1>
 
-<!-- CATEGORY BUTTONS -->
 <div class="category" data-target="youth-overview">🌱 Program Overview</div>
-<div class="category" data-target="tree-climbing">🌳 Professional Tree Climbing & Safety</div>
-<div class="category" data-target="business-training">📘 Business & Job Skills Training</div>
-<div class="category" data-target="community-projects">🌿 Community Projects</div>
-<div class="category" data-target="join-program">💚 Join the Program</div>
-<div class="category" data-target="sponsor-youth-training">🤝 Sponsor Youth Training</div>
-
-<!-- HIDDEN CONTENT SECTIONS -->
 <div id="youth-overview" class="hidden-content">
-    <h2>🌱 Program Overview</h2>
-    <p>
-        Our youth training program is built around <strong>real work, real responsibility, and real mentorship</strong>.  
-        We don’t teach from a classroom — we teach from the field, where youth learn hands-on skills that build confidence, discipline, and purpose.
-    </p>
-    <p>Every youth in our program learns:</p>
-    <ul>
-        <li>Tree climbing fundamentals and professional safety practices</li>
-        <li>Tool handling, rope management, and situational awareness</li>
-        <li>Environmental stewardship and respect for nature</li>
-        <li>Teamwork, leadership, communication, and accountability</li>
-    </ul>
+  <h2>🌱 Program Overview</h2>
+  <p>
+    Our youth training program is built around <strong>real work, real responsibility, and real mentorship</strong>.
+    We don’t teach from a classroom — we teach from the field, where youth learn hands-on skills that build confidence, discipline, and purpose.
+  </p>
+  <p>Every youth in our program learns:</p>
+  <ul>
+    <li>Tree climbing fundamentals and professional safety practices</li>
+    <li>Tool handling, rope management, and situational awareness</li>
+    <li>Environmental stewardship and respect for nature</li>
+    <li>Teamwork, leadership, communication, and accountability</li>
+  </ul>
 </div>
 
+<div class="category" data-target="youth-path">🌿 Youth Mentorship Pathway</div>
+<div id="youth-path" class="hidden-content">
+  <h2>🌿 Youth Mentorship Pathway</h2>
+  <p>Our youth follow the same structured mentorship path described on the Mentors page, adapted for their age and readiness.</p>
+
+  <h4>Phase 1 — Orientation & Safety</h4>
+  <p>Introduction to PPE, knots, rope handling, ground safety, and communication.</p>
+
+  <h4>Phase 2 — Ground Operations</h4>
+  <p>Raking, hauling, rope management, spotting, and working as a team.</p>
+
+  <h4>Phase 3 — Beginner Climbing</h4>
+  <p>Basic ascent, controlled descent, and safe movement in the canopy under full supervision.</p>
+
+  <h4>Phase 4 — Intermediate Skills</h4>
+  <p>Rigging basics, hazard awareness, non-powered saw safety, and environmental care.</p>
+
+  <h4>Phase 5 — Leadership & Service</h4>
+  <p>Youth help lead small teams during community projects and service days.</p>
+
+  <h4>Phase 6 — Certification & Career Path</h4>
+  <p>For youth who want to go further, we support certification prep and job pathways.</p>
+</div>
+
+<div class="category" data-target="tree-climbing">🌳 Professional Tree Climbing & Safety</div>
 <div id="tree-climbing" class="hidden-content">
-    <h2>🌳 Professional Tree Climbing & Safety</h2>
-    <p>
-        Our youth learn <strong>professional tree climbing</strong> from experienced mentors who work in the field every day.  
-        This is not recreational climbing — this is <strong>real arborist training</strong>, taught with industry‑standard gear and safety protocols.
-    </p>
-    <p>Youth learn how to:</p>
-    <ul>
-        <li>Use harnesses, saddles, helmets, and ropes correctly</li>
-        <li>Perform safe ascents and controlled descents</li>
-        <li>Inspect trees for health, hazards, and structural weaknesses</li>
-        <li>Move confidently and safely in elevated environments</li>
-        <li>Respect the environment while working in it</li>
-    </ul>
-    <p>
-        This training builds strength, focus, discipline, and trust — skills that carry into every part of life.
-    </p>
+  <h2>🌳 Professional Tree Climbing & Safety</h2>
+  <p>
+    Youth learn <strong>professional tree climbing</strong> from experienced mentors who work in the field every day.
+    This is not recreational climbing — this is <strong>real arborist training</strong>, taught with industry‑standard gear and safety protocols.
+  </p>
+  <p>Youth learn how to:</p>
+  <ul>
+    <li>Use harnesses, saddles, helmets, and ropes correctly</li>
+    <li>Perform safe ascents and controlled descents</li>
+    <li>Inspect trees for health, hazards, and structural weaknesses</li>
+    <li>Move confidently and safely in elevated environments</li>
+    <li>Respect the environment while working in it</li>
+  </ul>
 </div>
 
+<div class="category" data-target="business-training">📘 Business & Job Skills Training</div>
 <div id="business-training" class="hidden-content">
-    <h2>📘 Business & Job Skills Training</h2>
-    <p>
-        We don’t just train youth to climb — we train them to <strong>build a future</strong>.  
-        Our program includes real business education so youth can turn their skills into opportunities.
-    </p>
-    <p>Youth learn how to:</p>
-    <ul>
-        <li>Find clients and understand what homeowners look for</li>
-        <li>Give estimates and communicate pricing clearly</li>
-        <li>Land jobs through professionalism and confidence</li>
-        <li>Stay organized with scheduling, tools, and responsibilities</li>
-        <li>Practice proper etiquette when speaking with clients</li>
-        <li>Build a reputation based on reliability and respect</li>
-    </ul>
-    <p>
-        These business skills prepare youth not just for tree work — but for <strong>any career path</strong> they choose.
-    </p>
+  <h2>📘 Business & Job Skills Training</h2>
+  <p>
+    We don’t just train youth to climb — we train them to <strong>build a future</strong>.
+    Our program includes real business education so youth can turn their skills into opportunities.
+  </p>
+  <p>Youth learn how to:</p>
+  <ul>
+    <li>Understand what homeowners and clients look for</li>
+    <li>Communicate clearly and respectfully with clients</li>
+    <li>Show up on time, prepared, and ready to work</li>
+    <li>Stay organized with tools, schedules, and responsibilities</li>
+    <li>Build a reputation based on reliability and respect</li>
+  </ul>
 </div>
 
+<div class="category" data-target="community-projects">🌿 Community Projects</div>
 <div id="community-projects" class="hidden-content">
-    <h2>🌿 Community Projects</h2>
-    <p>
-        Training is tied directly to service.  
-        Youth don’t just practice skills — they use them to <strong>restore and uplift the community</strong>.
-    </p>
-    <ul>
-        <li>Cleanup days in neglected areas</li>
-        <li>Tree trimming and hazard removal</li>
-        <li>Light building and repair projects</li>
-        <li>Beautification and restoration efforts</li>
-    </ul>
-    <p>
-        Every project teaches responsibility, teamwork, and pride in making a real difference.
-    </p>
-    <button onclick="location.href='/pages/community.html'">See Community Service</button>
+  <h2>🌿 Community Projects</h2>
+  <p>
+    Training is tied directly to service.
+    Youth don’t just practice skills — they use them to <strong>restore and uplift the community</strong>.
+  </p>
+  <ul>
+    <li>Cleanup days in neglected areas</li>
+    <li>Tree trimming and hazard removal</li>
+    <li>Light building and repair projects</li>
+    <li>Beautification and restoration efforts</li>
+  </ul>
+  <button onclick="location.href='/pages/community.html'">See Community Service</button>
 </div>
 
+<div class="category" data-target="join-program">💚 Join the Program</div>
 <div id="join-program" class="hidden-content">
-    <h2>💚 Join the Program</h2>
-    <p>
-        We welcome youth who are ready to learn, work, and grow.  
-        No experience is required — just a willingness to try, listen, and show up.
-    </p>
-    <p>
-        Parents, guardians, or youth themselves can reach out to start the enrollment process.
-    </p>
-    <button data-popup="youth-join-popup">Request Youth Enrollment</button>
+  <h2>💚 Join the Program</h2>
+  <p>
+    We welcome youth who are ready to learn, work, and grow.
+    No experience is required — just a willingness to try, listen, and show up.
+  </p>
+  <p>
+    Parents, guardians, or youth themselves can reach out to start the enrollment process.
+  </p>
+  <button data-popup="youth-join-popup">Request Youth Enrollment</button>
 </div>
 
+<div class="category" data-target="sponsor-youth-training">🤝 Sponsor Youth Training</div>
 <div id="sponsor-youth-training" class="hidden-content">
-    <h2>🤝 Sponsor Youth Training</h2>
-    <p>
-        You can directly support youth training by sponsoring gear, classes, and service days.  
-        Your support helps youth gain skills that last a lifetime.
-    </p>
-    <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Options</button>
-    <button onclick="location.href='/pages/donate.html'">Donate to Youth Training</button>
+  <h2>🤝 Sponsor Youth Training</h2>
+  <p>
+    You can directly support youth training by sponsoring gear, classes, and service days.
+    Your support helps youth gain skills that last a lifetime.
+  </p>
+  <button onclick="location.href='/pages/sponsorships.html'">View Sponsorship Options</button>
+  <button onclick="location.href='/pages/donate.html'">Donate to Youth Training</button>
 </div>
 
-<!-- Youth Join Popup -->
 <div id="youth-join-popup" class="popup">
-    <div class="popup-content">
-        <h2>Request Youth Enrollment</h2>
-        <p>Send us an email with basic info and we’ll follow up with next steps.</p>
-        <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Youth%20Training%20Enrollment%20Request&body=Youth%20Name:%0D%0AAge:%0D%0AParent/Guardian%20Name:%0D%0AContact%20Phone:%0D%0AWhy%20you%20are%20interested:'">
-            Open Email to Request Enrollment
-        </button>
-        <br><br>
-        <button class="close-popup">Close</button>
-    </div>
+  <div class="popup-content">
+    <h2>Request Youth Enrollment</h2>
+    <p>Send us an email with basic info and we’ll follow up with next steps.</p>
+    <button onclick="window.location.href='mailto:boardwalkclay1@gmail.com?subject=Youth%20Training%20Enrollment%20Request&body=Youth%20Name:%0D%0AAge:%0D%0AParent/Guardian%20Name:%0D%0AContact%20Phone:%0D%0AWhy%20you%20are%20interested:'">
+      Open Email to Request Enrollment
+    </button>
+    <br><br>
+    <button class="close-popup">Close</button>
+  </div>
 </div>
 
-<!-- INFO BOX -->
-<div id="info-box" class="content-box"></div>
+<script>
+  const burger = document.getElementById("burger-btn");
+  const menu = document.getElementById("mobile-menu");
+  burger.addEventListener("click", () => menu.classList.toggle("open"));
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => menu.classList.remove("open"));
+  });
+
+  document.querySelectorAll('.category').forEach(cat => {
+    cat.addEventListener('click', () => {
+      const target = document.getElementById(cat.dataset.target);
+      if (!target) return;
+      target.style.display = target.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+  document.querySelectorAll('[data-popup]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById(btn.dataset.popup).style.display = 'flex';
+    });
+  });
+  document.querySelectorAll('.close-popup').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.popup').style.display = 'none';
+    });
+  });
+</script>
 
 </body>
 </html>
