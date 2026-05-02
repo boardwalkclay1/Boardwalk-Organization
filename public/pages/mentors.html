@@ -2,211 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mentors | Boardwalk Clay Nonprofit</title>
-  <meta name="description" content="Meet the professional arborists and community mentors guiding youth through hands-on training, safety, and leadership at Boardwalk Clay Nonprofit.">
+  <title>Mentors | Boardwalk Clay Organization</title>
+  <meta name="description" content="Meet the professional arborists and mentors guiding youth through hands-on training, safety, and leadership at Boardwalk Clay.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="../assets/favicon.ico">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="/images/bco-logo.png" type="image/png" sizes="64x64">
+  <meta property="og:title" content="Boardwalk Clay Organization - Mentors">
+  <meta property="og:description" content="A brotherhood of tree professionals teaching youth the art and discipline of arborist work.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('../images/bco-mentor.jpg') center/cover no-repeat fixed;
-      color: #fff;
-      overflow-x: hidden;
+      background-image: url('/images/bco-mentor.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
-
-    /* HEADER */
-    header {
+    .mentor-header-right {
+      position: absolute;
+      right: 20px;
+      top: 90px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 22px;
-      background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(6px);
-      font-weight: 600;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-
-    .burger {
-      font-size: 32px;
-      cursor: pointer;
-      padding: 6px 10px;
-      border-radius: 6px;
-      transition: 0.2s;
-    }
-
-    .burger:hover {
-      background: rgba(255,255,255,0.15);
-    }
-
-    /* NAV — FIXED */
-    nav {
-      display: none; /* FIX: hidden by default */
       flex-direction: column;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(6px);
-      padding: 18px;
-      border-bottom: 2px solid rgba(255,255,255,0.15);
-      z-index: 19;
+      align-items: center;
+      gap: 6px;
+      z-index: 10;
     }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 0;
-      font-size: 18px;
-      transition: 0.2s;
+    .mentor-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2fa02f;
+      box-shadow: 0 0 18px rgba(0,255,0,0.4);
+      background: #000;
     }
-
-    nav a:hover {
-      color: #aef;
+    .mentor-name-tag {
+      background: rgba(0,0,0,0.7);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid #2fa02f;
     }
-
-    /* DESKTOP NAV */
-    @media (min-width: 900px) {
-      nav {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-        gap: 18px;
-        background: rgba(0,0,0,0.6);
-        border: none;
+    @media (max-width: 800px) {
+      .mentor-header-right {
+        position: static;
+        margin: 10px auto 0;
       }
     }
-
     h1 {
       text-align: center;
-      margin: 40px 0 20px;
-      font-size: 2.6em;
+      margin-top: 30px;
+      font-size: 2.4rem;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    }
-
-    /* CATEGORY BUTTONS */
-    .category {
-      background: rgba(0,0,0,0.65);
-      padding: 18px 24px;
-      margin: 20px auto 0;
-      max-width: 900px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1.25em;
-      border: 1px solid rgba(255,255,255,0.15);
-      transition: 0.3s;
-    }
-
-    .category:hover {
-      background: rgba(0,0,0,0.8);
-      transform: scale(1.02);
-    }
-
-    /* CONTENT BOXES */
-    .content-box {
-      background: rgba(0,0,0,0.55);
-      padding: 22px 26px;
-      margin: 0 auto 24px;
-      max-width: 900px;
-      border-radius: 12px;
-      display: none;
-      line-height: 1.7em;
-      border: 1px solid rgba(255,255,255,0.1);
-      animation: fadeIn 0.35s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .mentor-card {
-      background: rgba(0,0,0,0.45);
-      padding: 18px;
-      border-radius: 12px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    button {
-      background: #00c853;
-      color: #fff;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-
-    button:hover {
-      background: #00e676;
-    }
-
-    /* POPUP */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 30;
-    }
-
-    .popup-content {
-      background: #111;
-      padding: 32px;
-      border-radius: 14px;
-      max-width: 420px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .close-popup {
-      background: #444;
-      margin-top: 12px;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">Boardwalk Clay Nonprofit</div>
-  <div class="burger">☰</div>
+  <div class="logo">
+    <img src="/images/bco-logo.png" class="logo-img" alt="Boardwalk Clay Logo">
+    Boardwalk Clay Organization
+  </div>
+  <div class="burger" id="burger-btn">☰</div>
 </header>
 
+<div id="mobile-menu" class="mobile-menu">
+  <a href="/index.html">Home</a>
+  <a href="/pages/community.html">Community Service</a>
+  <a href="/pages/sponsorships.html">Sponsorships</a>
+  <a href="/pages/youth.html">Youth Training</a>
+  <a href="/pages/mentors.html">Mentors</a>
+  <a href="/pages/events.html">Events</a>
+  <a href="/pages/donate.html">Donate</a>
+  <a href="/pages/contact.html">Contact</a>
+</div>
+
 <nav>
-  <a href="../index.html">Home</a>
-  <a href="community.html">Community Service</a>
-  <a href="sponsorships.html">Sponsorships</a>
-  <a href="youth.html">Youth Training</a>
-  <a href="mentors.html">Mentors</a>
-  <a href="events.html">Events</a>
-  <a href="donate.html">Donate</a>
-  <a href="contact.html">Contact</a>
+  <a href="/index.html">Home</a>
+  <a href="/pages/community.html">Community Service</a>
+  <a href="/pages/sponsorships.html">Sponsorships</a>
+  <a href="/pages/youth.html">Youth Training</a>
+  <a href="/pages/mentors.html">Mentors</a>
+  <a href="/pages/events.html">Events</a>
+  <a href="/pages/donate.html">Donate</a>
+  <a href="/pages/contact.html">Contact</a>
 </nav>
+
+<div class="mentor-header-right">
+  <img src="/images/chainsaw.png" alt="Mentor Photo" class="mentor-photo">
+  <div class="mentor-name-tag">Lead Mentor</div>
+</div>
 
 <h1>Our Mentors</h1>
 
-<!-- CATEGORY SECTIONS (unchanged content, just cleaner layout) -->
 <div class="category" data-target="team-story">Our Story: A Brotherhood of Tree Professionals</div>
 <div id="team-story" class="content-box">
   <p>
-    Our mentorship team is built from a tight-knit group of professional arborists, climbers, and community workers who have known each other for over a decade. 
+    Our mentorship team is built from a tight-knit group of professional arborists, climbers, and community workers who have known each other for over a decade.
     We’ve climbed together, worked storms together, cleaned neighborhoods together, and built careers side-by-side.
   </p>
   <p>
-    One day we realized something:  
+    One day we realized something:
     <strong>we’ve been blessed with skills that can change lives.</strong>
   </p>
   <p>
-    So we made a decision —  
+    So we made a decision —
     <strong>to teach the community, especially the youth, the art and discipline of being an arborist.</strong>
   </p>
   <p>
@@ -231,28 +136,27 @@
   <h3>The Boardwalk Clay Mentorship Path</h3>
   <p>Our mentorship program is structured, safe, and built for real growth.</p>
 
-  <h4>1. Orientation & Safety</h4>
-  <p>Youth learn the basics: PPE, knots, communication, ground safety, and respect for tools.</p>
+  <h4>Phase 1 — Orientation & Safety</h4>
+  <p>Youth learn PPE, knots, rope handling, ground safety, communication, and respect for tools.</p>
 
-  <h4>2. Ground Operations</h4>
-  <p>Before climbing, youth master raking, hauling, rope management, and teamwork.</p>
+  <h4>Phase 2 — Ground Operations</h4>
+  <p>Before climbing, youth master raking, hauling, rope management, spotting, and teamwork.</p>
 
-  <h4>3. Beginner Climbing</h4>
-  <p>Under full supervision, youth learn basic ascent, positioning, and controlled movement.</p>
+  <h4>Phase 3 — Beginner Climbing</h4>
+  <p>Under full supervision, youth learn basic ascent, controlled descent, positioning, and movement in the canopy.</p>
 
-  <h4>4. Intermediate Skills</h4>
-  <p>Rigging, limb control, saw safety (non-powered), and environmental awareness.</p>
+  <h4>Phase 4 — Intermediate Arborist Skills</h4>
+  <p>Youth learn rigging, limb control, hazard assessment, non-powered saw safety, and environmental care.</p>
 
-  <h4>5. Leadership & Service</h4>
-  <p>Youth lead small teams during community cleanups and service projects.</p>
+  <h4>Phase 5 — Leadership & Community Service</h4>
+  <p>Youth lead small teams during cleanups, tree trimming, hazard removal, and restoration projects.</p>
 
-  <h4>6. Certification Path (Optional)</h4>
-  <p>We help youth pursue real arborist certifications and job opportunities.</p>
+  <h4>Phase 6 — Certification & Career Path</h4>
+  <p>We help youth pursue arborist certifications, build resumes, and connect to job opportunities.</p>
 </div>
 
 <div class="category" data-target="mentor-profiles">Meet Our Mentors</div>
 <div id="mentor-profiles" class="content-box">
-
   <div class="mentor-card">
     <h3>Alex “Canopy” Rivers</h3>
     <p><strong>Specialty:</strong> Advanced climbing, rigging, canopy movement</p>
@@ -270,13 +174,6 @@
     <p><strong>Specialty:</strong> Youth development, communication, leadership</p>
     <p><strong>Focus:</strong> Building confidence, teamwork, and long‑term growth.</p>
   </div>
-
-</div>
-
-<div class="category" data-target="become-mentor">Apply to Be a Mentor</div>
-<div id="become-mentor" class="content-box">
-  <p>If you have experience in tree work, construction, environmental care, or youth leadership, you may be a fit.</p>
-  <button data-popup="mentor-join-popup">Apply Now</button>
 </div>
 
 <div class="category" data-target="for-section">For Youth, Parents, Mentors & Sponsors</div>
@@ -285,7 +182,7 @@
   <p>Learn real skills, build confidence, and join a team that supports your growth.</p>
 
   <h3>For Parents</h3>
-  <p>Our program is structured, supervised, and focused on safety and discipline.</p>
+  <p>Our program is structured, supervised, and focused on safety, discipline, and opportunity.</p>
 
   <h3>For Mentors</h3>
   <p>Share your skills, give back, and help shape the next generation.</p>
@@ -294,14 +191,19 @@
   <p>Your support provides gear, safety equipment, transportation, and training time.</p>
 </div>
 
+<div class="category" data-target="become-mentor">Apply to Be a Mentor</div>
+<div id="become-mentor" class="content-box">
+  <p>If you have experience in tree work, construction, environmental care, or youth leadership, you may be a fit.</p>
+  <button data-popup="mentor-join-popup">Apply Now</button>
+</div>
+
 <div class="category" data-target="sponsor-mentors">Sponsor Mentors</div>
 <div id="sponsor-mentors" class="content-box">
   <p>You can directly support the mentors who make this work possible.</p>
-  <a href="sponsorships.html"><button>View Mentor Sponsorship</button></a>
-  <a href="donate.html"><button>Donate to Mentor Support</button></a>
+  <button onclick="location.href='/pages/sponsorships.html'">View Mentor Sponsorship</button>
+  <button onclick="location.href='/pages/donate.html'">Donate to Mentor Support</button>
 </div>
 
-<!-- POPUP -->
 <div id="mentor-join-popup" class="popup">
   <div class="popup-content">
     <h2>Apply to Be a Mentor</h2>
@@ -315,37 +217,30 @@
 </div>
 
 <script>
-/* BURGER MENU FIX */
-document.querySelector(".burger").addEventListener("click", () => {
-  const nav = document.querySelector("nav");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-});
+  const burger = document.getElementById("burger-btn");
+  const menu = document.getElementById("mobile-menu");
+  burger.addEventListener("click", () => menu.classList.toggle("open"));
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => menu.classList.remove("open"));
+  });
 
-/* DROPDOWNS */
-document.querySelectorAll('.category').forEach(cat => {
-  cat.addEventListener('click', () => {
-    const target = document.getElementById(cat.dataset.target);
-
-    document.querySelectorAll('.content-box').forEach(box => {
-      if (box !== target) box.style.display = "none";
+  document.querySelectorAll('.category').forEach(cat => {
+    cat.addEventListener('click', () => {
+      const target = document.getElementById(cat.dataset.target);
+      if (!target) return;
+      target.style.display = target.style.display === 'block' ? 'none' : 'block';
     });
-
-    target.style.display = target.style.display === 'block' ? 'none' : 'block';
   });
-});
-
-/* POPUPS */
-document.querySelectorAll('[data-popup]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.getElementById(btn.dataset.popup).style.display = 'flex';
+  document.querySelectorAll('[data-popup]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById(btn.dataset.popup).style.display = 'flex';
+    });
   });
-});
-
-document.querySelectorAll('.close-popup').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.closest('.popup').style.display = 'none';
+  document.querySelectorAll('.close-popup').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.popup').style.display = 'none';
+    });
   });
-});
 </script>
 
 </body>
